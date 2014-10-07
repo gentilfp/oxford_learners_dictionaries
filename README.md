@@ -1,27 +1,60 @@
-Oxford::Learners::Dictionaries
-==============================
+Oxford::Learners::Dictionaries - English
+========================================
 
-Oxford Learner's Dictionaries API.
+Parser for Oxford Learners Dictionary English.
+It parses http://www.oxfordlearnersdictionaries.com/ and return the definition(s) of the word you're looking up
+
+## Features
+
+#### v0.1 - WIP
+Classification (verb, noun, adverb, etc) and its definition(s).
+
+#### v0.2 - TODO
+Definitions including example(s).
+
+#### v0.3 - TODO
+Including picture and pronunciation (American(NAmE) and British(BrE)).
+
+#### v0.4 - TODO
+Usage, e.g. when looking for 'car', it'll also provide information about 'having a car', 'driving a car', etc.
+
+#### Further version
+Please let me know :)
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'oxford-learners-dictionaries'
+# gem 'oxford-learners-dictionaries'
+# not available through rubygems yet
+
+Clone it!
 ```
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install oxford-learners-dictionaries
-
 ## Usage
 
-In progress...
+#### Example 1
+```
+# Creates object
+obj = Oxford::Learners::Dictionaries::English.new("car")
+
+# Goes to the dictionary and parse its data
+obj.look_up
+```
+
+```
+obj.definition
+=> {
+  :definition_0 => "a road vehicle with an engine and four wheels that can carry a small number of passengers",
+  :definition_1 => "a separate section of a train",
+  :definition_2 => "a coach/car on a train of a particular type"
+}
+```
 
 ## Contributing
 
