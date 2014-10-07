@@ -1,6 +1,7 @@
-# Oxford::Learners::Dictionaries
+Oxford::Learners::Dictionaries
+==============================
 
-TODO: Write a gem description
+Oxford Learner's Dictionaries API.
 
 ## Installation
 
@@ -20,7 +21,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+In progress...
 
 ## Contributing
 
