@@ -1,13 +1,20 @@
+require 'nokogiri'
+require 'open-uri'
+
 module Oxford
   module Learners
     module Dictionaries
       class English
-        attr_reader :definition, :word, :page
+        attr_reader :definition, :url, :word, :page
 
         def initialize word
           @word = word
-          @page = Nokogiri::HTML(open("http://www.oxfordlearnersdictionaries.com/definition/english/#{word}"))
+          @url = "http://www.oxfordlearnersdictionaries.com/definition/english/#{word}"
           @definition = Hash.new
+        end
+
+        def look_up
+          @page = Nokogiri::HTML(open(@url))
           parse
         end
 
@@ -21,7 +28,7 @@ module Oxford
         end
 
         def unique_definition
-          @definition[:definition] = @page.css(".d").text
+          @definition[:definition_0] = @page.css(".d").text
         end
 
         def multiple_definitions
