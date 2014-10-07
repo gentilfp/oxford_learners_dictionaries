@@ -3,6 +3,7 @@ SimpleCov.start do
   add_filter "/spec/"
 end
 
+require 'webmock/rspec'
 require 'oxford-learners-dictionaries'
 
 RSpec.configure do |config|
