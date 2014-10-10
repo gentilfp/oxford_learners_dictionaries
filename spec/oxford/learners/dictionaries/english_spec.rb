@@ -68,5 +68,36 @@ describe Oxford::Learners::Dictionaries::English do
         expect(dictionary.definition[:definition_0]).to match definition
       end
     end
+
+    describe 'getting type from words' do
+      let(:fixture) { "./spec/fixtures/#{word}.html" }
+
+      context 'when its a noun' do
+        let(:type) { "noun" }
+        let(:word) { "car" }
+
+        it 'matches noun' do
+          expect(dictionary.type).to eq type
+        end
+      end
+
+      context 'when its a verb' do
+        let(:type) { "verb" }
+        let(:word) { "live" }
+
+        it 'matches verb' do
+          expect(dictionary.type).to eq type
+        end
+      end
+
+      context 'when its an adverb' do
+        let(:type) { "adverb" }
+        let(:word) { "however" }
+
+        it 'matches adverb' do
+          expect(dictionary.type).to eq type
+        end
+      end
+    end
   end
 end

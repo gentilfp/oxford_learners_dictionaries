@@ -5,12 +5,13 @@ module Oxford
   module Learners
     module Dictionaries
       class English
-        attr_reader :definition, :url, :word, :page
+        attr_reader :definition, :type, :url, :word, :page
 
         def initialize word
           @word = word
           @url = "http://www.oxfordlearnersdictionaries.com/definition/english/#{word}"
           @definition = Hash.new
+          @type = nil
         end
 
         def look_up
@@ -21,17 +22,22 @@ module Oxford
         private
         def parse
           if @page.css(".n-g").count > 0
-            multiple_definitions
+            parse_multiple_definitions
           else
-            unique_definition
+            parse_unique_definition
           end
+          parse_type
         end
 
-        def unique_definition
+        def parse_type
+          @type = @page.css('.pos').text
+        end
+
+        def parse_unique_definition
           @definition[:definition_0] = @page.css(".d").text
         end
 
-        def multiple_definitions
+        def parse_multiple_definitions
           @page.css(".n-g").each_with_index do |definition, index|
             @definition["definition_#{index}".to_sym] = definition.css(".d").text
           end
