@@ -21,12 +21,17 @@ module Oxford
 
         private
         def parse
-          if @page.css(".n-g").count > 0
-            parse_multiple_definitions
-          else
-            parse_unique_definition
-          end
           parse_type
+          unless parse_unique_definition
+            separators = [".sd-d", ".d"]
+            separators.each do |separator|
+              if @page.css(separator).count > 1
+                parse_multiple_definitions separator
+                return self
+              end
+            end
+          end
+          self
         end
 
         def parse_type
@@ -34,12 +39,18 @@ module Oxford
         end
 
         def parse_unique_definition
-          @definition[:definition_0] = @page.css(".d").text
+          puts  @page.css(".h-g").css(".n-g").to_s.empty?
+          @definition[:definition_0] = @page.css(".d").text if @page.css(".h-g").css(".n-g").to_s.empty?
+          !@definition.empty?
         end
 
-        def parse_multiple_definitions
-          @page.css(".n-g").each_with_index do |definition, index|
-            @definition["definition_#{index}".to_sym] = definition.css(".d").text
+        def parse_multiple_definitions separator
+          @page.css(separator).each_with_index do |definition, index|
+            @definition["definition_#{index}".to_sym] = if definition.text.empty?
+                              definition.css(".d").text
+                            else
+                              definition.text
+                            end
           end
         end
 
