@@ -39,8 +39,9 @@ module Oxford
         end
 
         def parse_unique_definition
-          puts  @page.css(".h-g").css(".n-g").to_s.empty?
-          @definition[:definition_0] = @page.css(".d").text if @page.css(".h-g").css(".n-g").to_s.empty?
+          if @page.css(".h-g").css(".n-g").to_s.empty? && @page.css(".n-g").count < 1
+            @definition[:definition_0] = @page.css(".d").text
+          end
           !@definition.empty?
         end
 
