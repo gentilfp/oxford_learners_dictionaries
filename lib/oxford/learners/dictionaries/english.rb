@@ -35,7 +35,7 @@ module Oxford
         end
 
         def parse_type
-          @type = @page.css('.pos').text
+          @type = @page.css('.pos').first.text
         end
 
         def parse_unique_definition
