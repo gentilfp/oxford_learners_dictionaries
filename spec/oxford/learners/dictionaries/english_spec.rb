@@ -39,13 +39,13 @@ describe Oxford::Learners::Dictionaries::English do
       dictionary.look_up
     end
 
-    describe 'random words' do
+    describe 'important words' do
       let(:fixture) { "./spec/fixtures/#{word}.html" }
 
-      context 'aviator' do
-        let(:word)  { 'aviator' }
-        let(:type)  { 'noun' }
-        let(:count) { 1 }
+      context '#take' do
+        let(:word)  { 'take' }
+        let(:type)  { 'verb' }
+        let(:count) { 42 }
 
         it 'matches noun' do
           expect(dictionary.type).to eq type
@@ -56,10 +56,10 @@ describe Oxford::Learners::Dictionaries::English do
         end
       end
 
-      context 'purse' do
-        let(:word)  { 'purse' }
-        let(:type)  { 'noun' }
-        let(:count) { 3 }
+      context '#get' do
+        let(:word)  { 'get' }
+        let(:type)  { 'verb' }
+        let(:count) { 27 }
 
         it 'matches noun' do
           expect(dictionary.type).to eq type
