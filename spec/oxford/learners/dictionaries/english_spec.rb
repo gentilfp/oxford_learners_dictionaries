@@ -41,6 +41,21 @@ describe Oxford::Learners::Dictionaries::English do
 
     describe 'random words' do
       let(:fixture) { "./spec/fixtures/#{word}.html" }
+
+      context 'aviator' do
+        let(:word)  { 'aviator' }
+        let(:type)  { 'noun' }
+        let(:count) { 1 }
+
+        it 'matches noun' do
+          expect(dictionary.type).to eq type
+        end
+
+        it 'counts 3 definitions' do
+          expect(dictionary.definition.count).to eq count
+        end
+      end
+
       context 'purse' do
         let(:word)  { 'purse' }
         let(:type)  { 'noun' }
@@ -51,7 +66,6 @@ describe Oxford::Learners::Dictionaries::English do
         end
 
         it 'counts 3 definitions' do
-          puts dictionary.definition
           expect(dictionary.definition.count).to eq count
         end
       end
