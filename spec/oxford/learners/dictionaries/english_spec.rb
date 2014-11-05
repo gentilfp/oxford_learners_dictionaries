@@ -39,6 +39,38 @@ describe Oxford::Learners::Dictionaries::English do
       dictionary.look_up
     end
 
+    describe 'random words' do
+      let(:fixture) { "./spec/fixtures/#{word}.html" }
+
+      context 'aviator' do
+        let(:word)  { 'aviator' }
+        let(:type)  { 'noun' }
+        let(:count) { 1 }
+
+        it 'matches noun' do
+          expect(dictionary.type).to eq type
+        end
+
+        it 'counts 3 definitions' do
+          expect(dictionary.definition.count).to eq count
+        end
+      end
+
+      context 'purse' do
+        let(:word)  { 'purse' }
+        let(:type)  { 'noun' }
+        let(:count) { 3 }
+
+        it 'matches noun' do
+          expect(dictionary.type).to eq type
+        end
+
+        it 'counts 3 definitions' do
+          expect(dictionary.definition.count).to eq count
+        end
+      end
+    end
+
     describe 'when a word has more than one definitions' do
       let(:definition_0) { "a road vehicle with an engine and four wheels that can carry a small number of passengers" }
       let(:definition_1) { "a separate section of a train" }
