@@ -23,7 +23,7 @@ module Oxford
         def parse
           parse_type
           unless parse_unique_definition
-            separators = [".sd-d", ".d"]
+            separators = [".sd-d", ".sd-g", ".d"]
             separators.each do |separator|
               if @page.css(separator).count > 1
                 parse_multiple_definitions separator
@@ -46,12 +46,22 @@ module Oxford
         end
 
         def parse_multiple_definitions separator
-          @page.css(separator).each_with_index do |definition, index|
-            @definition["definition_#{index}".to_sym] = if definition.text.empty?
-                              definition.css(".d").text
-                            else
-                              definition.text
-                            end
+          if separator == ".sd-d" || separator == ".d"
+            @page.css(separator).each_with_index do |definition, index|
+              @definition["definition_#{index}".to_sym] = if definition.text.empty?
+                                definition.css(".d").text
+                              else
+                                definition.text
+                              end
+            end
+          else
+            index = 0
+            @page.css(separator).each do |external_node|
+              external_node.css(".n-g").each do |definition|
+                @definition["definition_#{index}".to_sym] = definition.css(".d").text
+                index += 1
+              end
+            end
           end
         end
 
