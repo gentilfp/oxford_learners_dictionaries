@@ -5,9 +5,9 @@ module Oxford
   module Learners
     module Dictionaries
       class WordOfTheDay
-        attr_reader :word, :short_definition, :english
+        attr_reader :word, :short_definition#, :english
 
-        URL = "http://www.oxfordlearnersdictionaries.com/us/wotd/american_english/wotdrss.xml"
+        URL = "http://www.oxfordlearnersdictionaries.com"
 
         def initialize
           parse
@@ -15,23 +15,22 @@ module Oxford
 
         private
         def parse
-          @xml = Nokogiri::HTML(open(URL))
+          @wotd = Nokogiri::HTML(open(URL)).at("#daybox")
           @word = word
           @short_definition = short_definition
-          # TODO
-          # @english -> look up using English module
         end
 
         def word
-          @xml.xpath("//entry")[0].at("summary").content.
-            split("...")[0].split(":")[0].strip
+          wotd.css(".h").text unless wotd.nil?
         end
 
         def short_definition
-          @xml.xpath("//entry")[0].at("summary").content.
-            split("...")[0].split(":")[1].strip
+          wotd.css(".d").text unless wotd.nil?
         end
       end
     end
   end
 end
+
+# TODO
+# @english -> look up using English module
