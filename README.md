@@ -1,5 +1,6 @@
 Oxford::Learners::Dictionaries - English
 ========================================
+[![Code Climate](https://codeclimate.com/github/fpgentil/oxford_learners_dictionaries/badges/gpa.svg)](https://codeclimate.com/github/fpgentil/oxford_learners_dictionaries)
 
 Parser for Oxford Learners Dictionary.
 
