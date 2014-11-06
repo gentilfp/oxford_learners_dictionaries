@@ -1,13 +1,14 @@
 Oxford::Learners::Dictionaries - English
 ========================================
 
-Parser for Oxford Learners Dictionary English.
+Parser for Oxford Learners Dictionary.
+
 It parses http://www.oxfordlearnersdictionaries.com/ and return the definition(s) of the word you're looking up
 
 ## Features
 
 #### v0.1 - WIP
-Classification (verb, noun, adverb, etc) and its definition(s).
+Classification (verb, noun, adverb, etc) and its definition(s). Word of the day and Recent Popular searches.
 
 #### v0.2 - TODO
 Definitions including example(s).
@@ -26,8 +27,8 @@ Please let me know :)
 Add this line to your application's Gemfile:
 
 ```ruby
-# gem 'oxford-learners-dictionaries'
-# not available through rubygems yet
+# gem 'oxford_learners_dictionaries'
+# PS. not available through rubygems yet
 
 Clone it!
 ```
@@ -41,14 +42,14 @@ And then execute:
 #### Example 1
 ```
 # Creates object
-obj = Oxford::Learners::Dictionaries::English.new("car")
+word = OxfordLearnersDictionaries::English.new("car")
 
 # Goes to the dictionary and parse its data
-obj.look_up
+word.look_up
 ```
 
 ```
-obj.definition
+word.definition
 => {
   :definition_0 => "a road vehicle with an engine and four wheels that can carry a small number of passengers",
   :definition_1 => "a separate section of a train",
@@ -58,7 +59,7 @@ obj.definition
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/oxford-learners-dictionaries/fork )
+1. Fork it ( https://github.com/[my-github-username]/oxford_learners_dictionaries/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
