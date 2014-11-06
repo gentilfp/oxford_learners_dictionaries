@@ -1,4 +1,5 @@
 require 'oxford_learners_dictionaries/english'
+require 'oxford_learners_dictionaries/word_of_the_day'
 
 module OxfordLearnersDictionaries
 end
