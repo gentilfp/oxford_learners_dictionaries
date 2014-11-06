@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Oxford::Learners::Dictionaries::English do
+describe OxfordLearnersDictionaries::English do
 
   let(:word) { "word" }
   let(:dictionary) { described_class.new(word) }
