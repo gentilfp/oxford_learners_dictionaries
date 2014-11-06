@@ -4,7 +4,7 @@ SimpleCov.start do
 end
 
 require 'webmock/rspec'
-require 'oxford-learners-dictionaries'
+require 'oxford_learners_dictionaries'
 
 RSpec.configure do |config|
   config.filter_run :focus
