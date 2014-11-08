@@ -3,12 +3,16 @@ require 'open-uri'
 
 module OxfordLearnersDictionaries
   class WordOfTheDay
-    attr_reader :word, :short_definition#, :english
+    attr_reader :word, :short_definition, :english
 
     URL = "http://www.oxfordlearnersdictionaries.com"
 
     def initialize
       parse
+    end
+
+    def look_up
+      @english = English.new(word).look_up if word
     end
 
     private
@@ -27,6 +31,3 @@ module OxfordLearnersDictionaries
     end
   end
 end
-
-# TODO
-# @english -> look up using English module
