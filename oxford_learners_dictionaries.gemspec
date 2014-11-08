@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'oxford/learners/dictionaries/version'
+require 'oxford_learners_dictionaries/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "oxford-learners-dictionaries"
-  spec.version       = Oxford::Learners::Dictionaries::VERSION
+  spec.name          = "oxford_learners_dictionaries"
+  spec.version       = OxfordLearnersDictionaries::VERSION
   spec.authors       = ["Felipe Pelizaro Gentil"]
   spec.email         = ["cdigentil@gmail.com"]
   spec.summary       = %q{Oxford Learner's Dictionaries API}

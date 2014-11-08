@@ -1,5 +1,5 @@
-Oxford::Learners::Dictionaries - English
-========================================
+OxfordLearnersDictionaries Parser
+=================================
 [![Code Climate](https://codeclimate.com/github/fpgentil/oxford_learners_dictionaries/badges/gpa.svg)](https://codeclimate.com/github/fpgentil/oxford_learners_dictionaries)
 
 Parser for Oxford Learners Dictionary.
@@ -57,6 +57,30 @@ word.definition
   :definition_2 => "a coach/car on a train of a particular type"
 }
 ```
+
+#### Example 2
+```
+# Gets word of the day and short definition
+word_of_the_day = OxfordLearnersDictionaries::WordOfTheDay.new
+```
+
+```word_of_the_day.word
+ => "pragmatic"
+```
+
+```word_of_the_day.short_definition
+ => "solving problems in a practical…"
+```
+
+```
+# Get the full definition
+word_of_the_day.look_up
+```
+
+```word_of_the_day.english.definition
+ => {:definition_0=>"solving problems in a practical and sensible way rather than by having fixed ideas or theories"}
+ ```
+
 
 ## Contributing
 
