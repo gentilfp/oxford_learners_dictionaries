@@ -3,7 +3,7 @@ require 'spec_helper'
 describe OxfordLearnersDictionaries::WordOfTheDay do
 
   let(:word) { 'election' }
-  let(:short_definition) { 'the process of choosing a person or a group of people…' }
+  let(:short_definition) { 'the process of choosing a person or a group of people' }
 
   let(:url)          { 'http://www.oxfordlearnersdictionaries.com' }
   let(:word_url)     { "http://www.oxfordlearnersdictionaries.com/definition/english/#{word}" }
@@ -22,7 +22,7 @@ describe OxfordLearnersDictionaries::WordOfTheDay do
     end
 
     it 'gets short definition for wotd' do
-      expect(wotd.short_definition).to eq short_definition
+      expect(wotd.short_definition).to match short_definition
     end
   end
 
