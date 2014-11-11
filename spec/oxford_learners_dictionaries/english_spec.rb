@@ -19,10 +19,6 @@ describe OxfordLearnersDictionaries::English do
     it 'initializes @definition' do
       expect(dictionary.definition).to eq Hash.new
     end
-
-    it 'does not initialize page' do
-      expect(dictionary.page).to be_nil
-    end
   end
 
   describe '#look_up' do

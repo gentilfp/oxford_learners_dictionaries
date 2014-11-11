@@ -3,7 +3,7 @@ require 'open-uri'
 
 module OxfordLearnersDictionaries
   class English
-    attr_reader :definition, :type, :url, :word, :page
+    attr_reader :definition, :type, :url, :word
 
     def initialize word
       @word = word
