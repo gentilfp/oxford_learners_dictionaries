@@ -1,6 +1,7 @@
 OxfordLearnersDictionaries Parser
 =================================
 [![Code Climate](https://codeclimate.com/github/fpgentil/oxford_learners_dictionaries/badges/gpa.svg)](https://codeclimate.com/github/fpgentil/oxford_learners_dictionaries)
+[![Build Status](https://travis-ci.org/fpgentil/oxford_learners_dictionaries.svg?branch=master)](https://travis-ci.org/fpgentil/oxford_learners_dictionaries)
 
 Parser for Oxford Learners Dictionary.
 
@@ -9,10 +10,10 @@ It parses http://www.oxfordlearnersdictionaries.com/ and return the definition(s
 ## Features
 
 #### v0.1 - WIP
-Classification (verb, noun, adverb, etc) and its definition(s). Word of the day and Recent Popular searches.
+Classification (verb, noun, adverb, etc) and its definition(s) and word of the day
 
 #### v0.2 - TODO
-Definitions including example(s).
+Definitions including example(s) and Recent Popular searches.
 
 #### v0.3 - TODO
 Including picture and pronunciation (American(NAmE) and British(BrE)).
