@@ -5,12 +5,12 @@ OxfordLearnersDictionaries Parser
 
 Parser for Oxford Learners Dictionary.
 
-It parses http://www.oxfordlearnersdictionaries.com/ and return the definition(s) of the word you're looking up
+It parses http://www.oxfordlearnersdictionaries.com/ and return the definition(s) of the word you're looking up.
 
 ## Features
 
 #### v0.1
-Classification (verb, noun, adverb, etc) and its definition(s) and word of the day
+Classification (verb, noun, adverb, etc) and its definition(s) and word of the day.
 
 #### v0.2
 ###### WIP
@@ -32,10 +32,11 @@ Please let me know :)
 Add this line to your application's Gemfile:
 
 ```ruby
-# gem 'oxford_learners_dictionaries'
-# PS. not available through rubygems yet
+# Add to your Gemfile
+gem 'oxford_learners_dictionaries'
 
-Clone it!
+# or install manually
+gem install oxford_learners_dictionaries
 ```
 
 And then execute:
