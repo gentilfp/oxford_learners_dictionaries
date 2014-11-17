@@ -13,8 +13,12 @@ module OxfordLearnersDictionaries
     end
 
     def look_up
-      @page = Nokogiri::HTML(open(@url))
-      parse
+      begin
+        @page = Nokogiri::HTML(open(@url))
+        parse
+      rescue OpenURI::HTTPError
+        nil
+      end
     end
 
     private

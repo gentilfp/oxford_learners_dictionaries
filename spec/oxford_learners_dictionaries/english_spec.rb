@@ -128,4 +128,15 @@ describe OxfordLearnersDictionaries::English do
       end
     end
   end
+
+  describe 'when the word is not found' do
+    before :each do
+      stub_request(:any, url).to_raise(OpenURI::HTTPError.new('', nil))
+    end
+    let(:word) { 'asdf' }
+
+    it 'returns nil' do
+      expect(dictionary.look_up).to be_nil
+    end
+  end
 end
