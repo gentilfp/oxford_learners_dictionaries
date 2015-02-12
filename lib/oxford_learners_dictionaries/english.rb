@@ -15,6 +15,7 @@ module OxfordLearnersDictionaries
     def look_up
       begin
         @page = Nokogiri::HTML(open(@url))
+        @page.css('.idm-gs').remove
         parse
       rescue OpenURI::HTTPError
         nil
@@ -24,14 +25,10 @@ module OxfordLearnersDictionaries
     private
     def parse
       parse_type
-      unless parse_unique_definition
-        separators = [".sd-d", ".sd-g", ".d"]
-        separators.each do |separator|
-          if @page.css(separator).count > 1
-            parse_multiple_definitions separator
-            return self
-          end
-        end
+      if @page.css('.num').count > 0
+        parse_multiple_definitions
+      else
+        parse_single_definition
       end
       self
     end
@@ -40,30 +37,14 @@ module OxfordLearnersDictionaries
       @type = @page.css('.pos').first.text
     end
 
-    def parse_unique_definition
-      if @page.css(".h-g").css(".n-g").to_s.empty? && @page.css(".n-g").count < 1
-        @definition[:definition_0] = @page.css(".d").text
-      end
-      !@definition.empty?
+    def parse_single_definition
+      definitions =  @page.css('.def')
+      @definition[:definition_0] = definitions.count > 0 ? definitions[0].text : definitions.text
     end
 
-    def parse_multiple_definitions separator
-      if separator == ".sd-d" || separator == ".d"
-        @page.css(separator).each_with_index do |definition, index|
-          @definition["definition_#{index}".to_sym] = if definition.text.empty?
-                            definition.css(".d").text
-                          else
-                            definition.text
-                          end
-        end
-      else
-        index = 0
-        @page.css(separator).each do |external_node|
-          external_node.css(".n-g").each do |definition|
-            @definition["definition_#{index}".to_sym] = definition.css(".d").text
-            index += 1
-          end
-        end
+    def parse_multiple_definitions
+      @page.css('.num').count.times do |index|
+        @definition["definition_#{index}".to_sym] = @page.css('.def')[index].text
       end
     end
   end
