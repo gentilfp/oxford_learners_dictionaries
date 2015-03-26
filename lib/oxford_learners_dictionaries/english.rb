@@ -6,10 +6,11 @@ module OxfordLearnersDictionaries
     attr_reader :definition, :type, :url, :word
 
     def initialize word
-      @word = word
-      @url = "http://www.oxfordlearnersdictionaries.com/definition/english/#{word}"
+      formatted_word = word.strip.gsub(' ', '-') rescue ''
+      param_word = formatted_word.gsub('-', '+')
+      @url = "http://www.oxfordlearnersdictionaries.com/definition/english/#{formatted_word}?q=#{param_word}"
+      @word = formatted_word
       @definition = Hash.new
-      @type = nil
     end
 
     def look_up
@@ -20,6 +21,7 @@ module OxfordLearnersDictionaries
       rescue OpenURI::HTTPError
         nil
       end
+      self.definition
     end
 
     private
@@ -34,7 +36,7 @@ module OxfordLearnersDictionaries
     end
 
     def parse_type
-      @type = @page.css('.pos').first.text
+      @type = @page.css('.pos').first.text rescue 'unknown'
     end
 
     def parse_single_definition
