@@ -1,10 +1,12 @@
 require 'spec_helper'
 
-describe OxfordLearnersDictionaries::English do
+describe OxfordLearnersDictionaries::English, :vcr do
 
   let(:word) { "word" }
+  let(:formatted_word)    { word.strip.gsub(' ', '-') }
+  let(:param_word)       { formatted_word.gsub('-', '+') }
   let(:dictionary) { described_class.new(word) }
-  let(:url) { "http://www.oxfordlearnersdictionaries.com/definition/english/#{word}"  }
+  let(:url)     { "http://www.oxfordlearnersdictionaries.com/definition/english/#{formatted_word}?q=#{param_word}" }
 
   describe '.initialize' do
 
@@ -31,13 +33,10 @@ describe OxfordLearnersDictionaries::English do
 
   describe "looking up a word" do
     before :each do
-      stub_request(:any, url).to_return(body: File.new(fixture))
       dictionary.look_up
     end
 
     describe 'important words' do
-      let(:fixture) { "./spec/fixtures/#{word}.html" }
-
       context '#take' do
         let(:word)  { 'take' }
         let(:type)  { 'verb' }
@@ -68,10 +67,10 @@ describe OxfordLearnersDictionaries::English do
     end
 
     describe 'when a word has more than one definitions' do
+      let(:word)         { 'car' }
       let(:definition_0) { "a road vehicle with an engine and four wheels that can carry a small number of passengers" }
       let(:definition_1) { "a separate section of a train" }
       let(:definition_2) { "a coach/car on a train of a particular type" }
-      let(:fixture) { "./spec/fixtures/car.html" }
 
       it 'counts 3 definitions' do
         expect(dictionary.definition.count).to eq 3
@@ -85,8 +84,8 @@ describe OxfordLearnersDictionaries::English do
     end
 
     describe 'when a word has only one definition' do
+      let(:word)       { 'lion' }
       let(:definition) { "a large powerful animal of the cat family, that hunts in groups" }
-      let(:fixture) { "./spec/fixtures/lion.html" }
 
       it 'counts 1 definition' do
         expect(dictionary.definition.count).to eq 1
@@ -98,8 +97,6 @@ describe OxfordLearnersDictionaries::English do
     end
 
     describe 'getting type from words' do
-      let(:fixture) { "./spec/fixtures/#{word}.html" }
-
       context 'when its a noun' do
         let(:type) { "noun" }
         let(:word) { "car" }
@@ -111,7 +108,7 @@ describe OxfordLearnersDictionaries::English do
 
       context 'when its a verb' do
         let(:type) { "verb" }
-        let(:word) { "live" }
+        let(:word) { "play" }
 
         it 'matches verb' do
           expect(dictionary.type).to eq type
@@ -135,8 +132,8 @@ describe OxfordLearnersDictionaries::English do
     end
     let(:word) { 'asdf' }
 
-    it 'returns nil' do
-      expect(dictionary.look_up).to be_nil
+    it 'returns empty' do
+      expect(dictionary.look_up).to be_empty
     end
   end
 end

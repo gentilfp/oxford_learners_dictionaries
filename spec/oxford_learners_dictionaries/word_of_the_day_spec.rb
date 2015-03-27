@@ -1,22 +1,20 @@
 require 'spec_helper'
 
-describe OxfordLearnersDictionaries::WordOfTheDay do
+describe OxfordLearnersDictionaries::WordOfTheDay, :vcr do
 
-  let(:word) { 'election' }
-  let(:short_definition) { 'the process of choosing a person or a group of people' }
+  let(:word) { 'intangible' }
+  let(:wotd) { described_class.new }
+
+  let(:formatted_word)   { word.strip.gsub(' ', '-') }
+  let(:param_word)       { formatted_word.gsub('-', '+') }
+  let(:short_definition) { 'that exists but that is difficult to describe' }
 
   let(:url)          { 'http://www.oxfordlearnersdictionaries.com' }
-  let(:word_url)     { "http://www.oxfordlearnersdictionaries.com/definition/english/#{word}" }
+  let(:word_url)     { "http://www.oxfordlearnersdictionaries.com/definition/english/#{formatted_word}?q=#{param_word}" }
   let(:fixture_wotd) { './spec/fixtures/wotd.html' }
   let(:fixture)      { './spec/fixtures/election.html' }
 
-  let(:wotd)    { described_class.new }
-
   describe '.initialize' do
-    before do
-      stub_request(:any, url).to_return(body: File.new(fixture_wotd))
-    end
-
     it 'matches word of the day' do
       expect(wotd.word).to eq word
     end
@@ -44,16 +42,14 @@ describe OxfordLearnersDictionaries::WordOfTheDay do
 
     context 'when word is valid' do
       before do
-        stub_request(:any, url).to_return(body: File.new(fixture_wotd))
-        stub_request(:any, word_url).to_return(body: File.new(fixture))
         wotd.look_up
       end
 
-      let(:definition) { 'the process of choosing a person or a group of people for a position' }
+      let(:definition) { 'something that does not exist as a physical thing but is still valuable to a company' }
 
       it 'matches description count' do
-        expect(wotd.english.definition.count).to eq 2
-        expect(wotd.english.definition.to_s).to match definition
+        expect(wotd.english.count).to eq 1
+        expect(wotd.english.to_s).to match definition
       end
     end
   end
