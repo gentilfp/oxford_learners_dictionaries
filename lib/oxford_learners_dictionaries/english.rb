@@ -3,24 +3,31 @@ require 'open-uri'
 
 module OxfordLearnersDictionaries
   class English
-    attr_reader :definition, :type, :url, :word
+    attr_reader :definition, :type, :urls, :word
 
     def initialize word
       formatted_word = word.strip.gsub(' ', '-') rescue ''
       param_word = formatted_word.gsub('-', '+')
-      @url = "http://www.oxfordlearnersdictionaries.com/definition/english/#{formatted_word}?q=#{param_word}"
+      main_url =  "http://www.oxfordlearnersdictionaries.com/definition/english/#{formatted_word}?q=#{param_word}"
+
+      @urls = [ main_url, main_url.gsub('?q=', '1?q=') ]
       @word = formatted_word
       @definition = Hash.new
     end
 
     def look_up
-      begin
-        @page = Nokogiri::HTML(open(@url))
-        @page.css('.idm-gs').remove
-        parse
-      rescue OpenURI::HTTPError
-        nil
+      @urls.each do |url|
+        begin
+          @page = Nokogiri::HTML(open(url))
+          break
+        rescue OpenURI::HTTPError
+          @page = nil
+        end
       end
+      return {} if @page.nil?
+
+      @page.css('.idm-gs').remove
+      parse
       self.definition
     end
 
