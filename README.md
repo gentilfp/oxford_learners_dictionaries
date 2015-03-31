@@ -10,21 +10,18 @@ It parses http://www.oxfordlearnersdictionaries.com/ and return the definition(s
 ## Features
 
 #### v0.1
-Classification (verb, noun, adverb, etc) and its definition(s) and word of the day.
+Classification (verb, noun, adverb, etc) with its definition(s) and word of the day.
 
 #### v0.2
-###### WIP
 Definitions including example(s) and Recent Popular searches.
 
 #### v0.3
-###### TODO
 Including picture and pronunciation (American(NAmE) and British(BrE)).
 
 #### v0.4
-###### TODO
 Usage, e.g. when looking for 'car', it'll also provide information about 'having a car', 'driving a car', etc.
 
-#### Further version
+#### Further versions
 Please let me know :)
 
 ## Installation
