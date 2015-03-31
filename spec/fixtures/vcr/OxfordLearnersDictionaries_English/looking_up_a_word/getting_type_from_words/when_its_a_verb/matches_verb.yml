@@ -21,27 +21,27 @@ http_interactions:
       Server:
       - nginx/1.7.7
       Date:
-      - Fri, 27 Mar 2015 19:38:11 GMT
+      - Tue, 31 Mar 2015 13:18:00 GMT
       Content-Length:
       - '0'
       Connection:
       - keep-alive
       Set-Cookie:
-      - JSESSIONID=4181117AF33E7077A0BDB3D2C1EA520C; Path=/; HttpOnly
-      - session=68363f70839fab8d0bde84ee6fc635a3; domain=.oxfordlearnersdictionaries.com;
+      - JSESSIONID=7C1194E630DBDDC0374C6C4292E199F0; Path=/; HttpOnly
+      - session=d3f6ad59a1c9be42babf26b6adc38e72; domain=.oxfordlearnersdictionaries.com;
         path=/
       Location:
-      - http://www.oxfordlearnersdictionaries.com/definition/english/play_1;jsessionid=4181117AF33E7077A0BDB3D2C1EA520C?isEntryInOtherDict=false
+      - http://www.oxfordlearnersdictionaries.com/definition/english/play_1;jsessionid=7C1194E630DBDDC0374C6C4292E199F0?isEntryInOtherDict=false
       Content-Language:
       - en
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Fri, 27 Mar 2015 19:38:11 GMT
+  recorded_at: Tue, 31 Mar 2015 13:18:00 GMT
 - request:
     method: get
-    uri: http://www.oxfordlearnersdictionaries.com/definition/english/play_1;jsessionid=4181117AF33E7077A0BDB3D2C1EA520C?isEntryInOtherDict=false
+    uri: http://www.oxfordlearnersdictionaries.com/definition/english/play_1;jsessionid=7C1194E630DBDDC0374C6C4292E199F0?isEntryInOtherDict=false
     body:
       encoding: US-ASCII
       string: ''
@@ -60,7 +60,7 @@ http_interactions:
       Server:
       - nginx/1.7.7
       Date:
-      - Fri, 27 Mar 2015 19:38:12 GMT
+      - Tue, 31 Mar 2015 13:18:01 GMT
       Content-Type:
       - text/html;charset=UTF-8
       Content-Length:
@@ -68,7 +68,7 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - session=68363f70839fab8d0bde84ee6fc635a3; domain=.oxfordlearnersdictionaries.com;
+      - session=d3f6ad59a1c9be42babf26b6adc38e72; domain=.oxfordlearnersdictionaries.com;
         path=/
       Content-Language:
       - en
@@ -2580,5 +2580,5 @@ http_interactions:
         MSIgd2lkdGg9IjEiIGFsdD0iUXVhbnRjYXN0Ii8+PC9ub3NjcmlwdD4KCjwv
         Ym9keT4KPC9odG1sPgo=
     http_version: 
-  recorded_at: Fri, 27 Mar 2015 19:38:12 GMT
+  recorded_at: Tue, 31 Mar 2015 13:18:01 GMT
 recorded_with: VCR 2.9.3

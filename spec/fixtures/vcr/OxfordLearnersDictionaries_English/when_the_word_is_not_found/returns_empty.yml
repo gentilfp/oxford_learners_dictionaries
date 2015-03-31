@@ -1,0 +1,283 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.oxfordlearnersdictionaries.com/definition/english/asdf1?q=asdf
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx/1.7.7
+      Date:
+      - Tue, 31 Mar 2015 13:18:15 GMT
+      Content-Type:
+      - text/html;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - JSESSIONID=B13B079E8DFA26946ABEB27D85FD777C; Path=/; HttpOnly
+      - session=d3f6ad59a1c9be42babf26b6adc38e72; domain=.oxfordlearnersdictionaries.com;
+        path=/
+      Content-Language:
+      - en
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html
+        xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n<head>\n
+        \   <title>asdf1 - Did you spell it correctly? Alternative spellings from
+        Oxford Advanced Learner&apos;s Dictionary at OxfordLearnersDictionaries.com
+        </title>\n    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"
+        />\n    <meta name=\"description\" content=\"asdf1 - Alternative spellings
+        from Oxford Advanced Learner&apos;s Dictionary at OxfordLearnersDictionaries.com\"
+        />\n    <meta name=\"keywords\" content=\"asdf1, alternative spellings of
+        asdf1, Oxford Advanced Learner&apos;s Dictionary \" />\n        <meta name=\"robots\"
+        content=\"noindex,follow\" />\n            <meta http-equiv=\"X-UA-Compatible\"
+        content=\"IE=edge\" />\n    <meta name='viewport' content='width=device-width,
+        initial-scale=1'>\n    <link href=\"http://www.oxfordlearnersdictionaries.com/external/styles/interface.css?version=1.5.1\"
+        rel=\"stylesheet\" type=\"text/css\" />\n    <link href=\"http://www.oxfordlearnersdictionaries.com/external/styles/responsive.css?version=1.5.1\"
+        rel=\"stylesheet\" type=\"text/css\" />\n    <link href=\"http://www.oxfordlearnersdictionaries.com/external/styles/oxford.css?version=1.5.1\"
+        rel=\"stylesheet\" type=\"text/css\" />\n    <link href=\"http://www.oxfordlearnersdictionaries.com/external/styles/jquery.lightbox-0.5.css?version=1.5.1\"
+        rel=\"stylesheet\" type=\"text/css\" />\n    <link href=\"http://www.oxfordlearnersdictionaries.com/external/styles/print.css?version=1.5.1\"
+        rel=\"stylesheet\" type=\"text/css\"  media=\"print\" />\n    <link href=\"http://www.oxfordlearnersdictionaries.com/external/styles/autocomplete.css?version=1.5.1\"
+        rel=\"stylesheet\" type=\"text/css\" />\n            <script type='text/javascript'>\n
+        \           var googletag = googletag || {};\n            googletag.cmd =
+        googletag.cmd || [];\n            var dfpSlots = {};\n            (function()
+        {\n                var gads = document.createElement('script');\n                gads.async
+        = true;\n                gads.type = 'text/javascript';\n                var
+        useSSL = 'https:' == document.location.protocol;\n                gads.src
+        = (useSSL ? 'https:' : 'http:') +'//www.googletagservices.com/tag/js/gpt.js';\n
+        \               var node = document.getElementsByTagName('script')[0];\n                node.parentNode.insertBefore(gads,
+        node);\n            })();\n            googletag.cmd.push(function() {\n                                                                                        var
+        mapping_topslot_a = googletag.sizeMapping()\n                                                         \n
+        \                                                           .addSize([1203,
+        0], [1, 1])  // hd (CSS min-width: 1220)\n                                                                                                                    .addSize([745,
+        0], [728, 90]) // tablet (CSS min-width: 762)\n                                                            .addSize([0,
+        0], [320, 50])    // mobile\n                                .build();\n                            dfpSlots[\"topslot_a\"]
+        = googletag.defineSlot('/70903302/topslot', [728, 90], 'ad_topslot_a')\n                                                          .defineSizeMapping(mapping_topslot_a)\n
+        \                                                                                                                       .setTargeting('old_vp',
+        'top')\n                                                                                                                        .setTargeting('old_hp',
+        'center')\n                                                                                                                    .addService(googletag.pubads());\n
+        \                                                                                                                           var
+        mapping_topslot_b = googletag.sizeMapping()\n                                                         \n
+        \                                                           .addSize([1203,
+        0], [728, 90])  // hd (CSS min-width: 1220)\n                                                                                                                    .addSize([0,
+        0], [1, 1])    // mobile\n                                .build();\n                            dfpSlots[\"topslot_b\"]
+        = googletag.defineSlot('/70903302/topslot', [1, 1], 'ad_topslot_b')\n                                                          .defineSizeMapping(mapping_topslot_b)\n
+        \                                                                                                                       .setTargeting('old_vp',
+        'top')\n                                                                                                                        .setTargeting('old_hp',
+        'center')\n                                                                                                                    .addService(googletag.pubads());\n
+        \                                                                                                                           var
+        mapping_btmslot_a = googletag.sizeMapping()\n                                                         \n
+        \                                                                                                                   .addSize([745,
+        0], [300, 250]) // tablet (CSS min-width: 762)\n                                                            .addSize([0,
+        0], [1, 1])    // mobile\n                                .build();\n                            dfpSlots[\"btmslot_a\"]
+        = googletag.defineSlot('/70903302/btmslot', [300, 250], 'ad_btmslot_a')\n
+        \                                                         .defineSizeMapping(mapping_btmslot_a)\n
+        \                                                                                                                       .setTargeting('old_vp',
+        'btm')\n                                                                                                                        .setTargeting('old_hp',
+        'center')\n                                                                                                                    .addService(googletag.pubads());\n
+        \                                                                                                                           var
+        mapping_btmslot_b = googletag.sizeMapping()\n                                                         \n
+        \                                                                                                                   .addSize([745,
+        0], [1, 1]) // tablet (CSS min-width: 762)\n                                                            .addSize([0,
+        0], [300, 250])    // mobile\n                                .build();\n
+        \                           dfpSlots[\"btmslot_b\"] = googletag.defineSlot('/70903302/btmslot',
+        [1, 1], 'ad_btmslot_b')\n                                                          .defineSizeMapping(mapping_btmslot_b)\n
+        \                                                                                                                       .setTargeting('old_vp',
+        'btm')\n                                                                                                                        .setTargeting('old_hp',
+        'center')\n                                                                                                                    .addService(googletag.pubads());\n
+        \                                                                                                                           var
+        mapping_houseslot1_a = googletag.sizeMapping()\n                                                         \n
+        \                                                                                                                   .addSize([0,
+        0], [180, 150])    // mobile\n                                .build();\n
+        \                           dfpSlots[\"houseslot1_a\"] = googletag.defineSlot('/70903302/houseslot1',
+        [180, 150], 'ad_houseslot1_a')\n                                                          .defineSizeMapping(mapping_houseslot1_a)\n
+        \                                                                                                                       .setTargeting('old_vp',
+        'btm')\n                                                                                                                        .setTargeting('old_hp',
+        'right')\n                                                                                                                    .addService(googletag.pubads());\n
+        \                                                                                                                           var
+        mapping_leftslot_a = googletag.sizeMapping()\n                                                         \n
+        \                                                                                                                   .addSize([745,
+        0], [160, 600]) // tablet (CSS min-width: 762)\n                                                            .addSize([0,
+        0], [1, 1])    // mobile\n                                .build();\n                            dfpSlots[\"leftslot_a\"]
+        = googletag.defineSlot('/70903302/leftslot', [160, 600], 'ad_leftslot_a')\n
+        \                                                         .defineSizeMapping(mapping_leftslot_a)\n
+        \                                                                                                                       .setTargeting('old_vp',
+        'top')\n                                                                                                                        .setTargeting('old_hp',
+        'left')\n                                                                                                                    .addService(googletag.pubads());\n
+        \                                                                                                                                                                           googletag.pubads().setTargeting(\"old_l\",
+        \"en\");\n                                                                                            googletag.pubads().setTargeting(\"old_pr\",
+        \"free\");\n                                                                                            googletag.pubads().setTargeting(\"old_pc\",
+        \"error\");\n                                                            \n
+        \                               googletag.pubads().enableSingleRequest();\n
+        \               googletag.pubads().collapseEmptyDivs(false);\n                googletag.enableServices();\n
+        \           });\n            function getDeviceByResolution() {\n                var
+        res = null;\n                if (window.matchMedia(\"(max-width: 761px)\").matches)\n
+        \                   res = \"mobile\";\n                else if (window.matchMedia(\"(min-width:
+        762px) and (max-width: 928px)\").matches)\n                    res = \"tablet\";\n
+        \               else if (window.matchMedia(\"(min-width: 1220px)\").matches)\n
+        \                   res = \"hd\";\n                else\n                    res
+        = \"desktop\";\n                return res;\n            }\n            var
+        curResolution = getDeviceByResolution();\n            window.onresize = function()
+        {\n                var newResolution = getDeviceByResolution();\n                if
+        (newResolution != curResolution) {\n                                        curResolution
+        = newResolution;\n                    googletag.pubads().refresh();\n                }\n
+        \           };\n        </script>\n    <!--[if gte IE 7 ]>\n        <link
+        href=\"http://www.oxfordlearnersdictionaries.com/external/styles/oxford-ie.css?version=1.5.1\"
+        rel=\"stylesheet\" type=\"text/css\" />\n    <![endif]-->\n    <!--[if IE
+        9]><script type=\"text/javascript\" src=\"http://www.oxfordlearnersdictionaries.com/external/scripts/matchMedia.js?version=1.5.1\"></script><![endif]-->\n
+        \       <link rel=\"icon\" type=\"image/x-icon\" href=\"http://www.oxfordlearnersdictionaries.com/external/images/favicon.ico?version=1.5.1\"/>\n
+        \   <script language=\"JavaScript\" type=\"text/javascript\" src=\"http://www.oxfordlearnersdictionaries.com/common.js?version=1.5.1\"></script>\n</head>\n<body
+        >\n    <noscript>\n        <div id=\"cookieLaw\">We use cookies to enhance
+        your experience on our website. By continuing to use our website, you are
+        agreeing to our use of cookies. You can change your cookie settings at any
+        time. <a href='http://global.oup.com/cookiepolicy/?siteid=oaadonline' target='_blank'>Find
+        out more</a></div>\n    </noscript>\n    <div id=\"ox-container\">\n    \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<div
+        id=\"ox-header\" class=\"\">\n    <div class=\"responsive_row flush-below
+        top\">\r\n    <div class=\"responsive_container responsive_display_on_smartphone\">\r\n
+        \       <div class=\"menu_button\"></div>\r\n    </div>\r\n    <div class=\"nav
+        responsive_container main_nav\">\r\n        <ul class=\"menu\">\r\n                         <li><a
+        \ href=\"http://www.oxfordlearnersdictionaries.com/\">Home</a></li>\r\n                         <li><a
+        \ href=\"http://www.oxfordlearnersdictionaries.com/topic/\">Topics</a></li>\r\n
+        \                        <li><a  href=\"http://www.oxfordlearnersdictionaries.com/wordlist/\">Wordlists</a></li>\r\n
+        \                        <li><a  href=\"http://www.oxfordlearnersdictionaries.com/mywordlist/\">My
+        Wordlists</a></li>\r\n                         <li><a  href=\"http://www.oxfordlearnersdictionaries.com/about/\">About</a></li>\r\n
+        \                        <li><a  href=\"http://www.oxfordlearnersdictionaries.com/faq/\">FAQ</a></li>\r\n
+        \       </ul>\r\n        \r\n                    <div class=\"menu login-circle
+        \">\r\n                <ul>\r\n                    <li><a href=\"http://www.oxfordlearnersdictionaries.com/account/login\">Log
+        in or Get Premium</a></li>\r\n                </ul>\r\n            </div>\r\n
+        \       </div>\r\n<a class='go-to-top responsive_display_on_smartphone' href='#wrap'
+        title='back to top'>Back to Top</a>\r\n</div>\n<div class=\"responsive_container
+        \">\n    <div class=\"old-logo-title responsive_hide_on_smartphone\"></div>\n
+        \   <div class=\"responsive_display_on_smartphone\"><a class=\"old-logo-title\"
+        href=\"http://www.oxfordlearnersdictionaries.com/\"></a></div>\n    <div class=\"mainsearch
+        responsive_row\">\n        <form id=\"search-form\" method=\"get\" action=\"http://www.oxfordlearnersdictionaries.com/search/english/direct/\"
+        onsubmit=\"return checkSearch('Type here');\">\n            <div class=\"dictionarySelector\">
+        \   \n    <select id=\"dictionary-selector\">\n                        <option
+        value=\"english\" selected=\"selected\">English</option>\n                                <option
+        value=\"american_english\" >American English</option>\n                </select>\n</div>\n
+        \           <input type=\"text\" id=\"q\" name=\"q\" \n                value=\"Type
+        here\" class=\"searchfield\" \n                onfocus=\"this.value=(this.value=='Type
+        here') ? changeText('', this) : this.value;\"\n                onblur=\"this.value=(this.value=='')
+        ? changeText('Type here', this) : this.value;\" />\n            <div class=\"inputSuggestions\"
+        style=\"\"></div>\n            <input type=\"submit\" id=\"search-btn\" value=\"\"
+        />\n        </form>\n    </div>   \n    \n   \n           <div class=\"responsive_hide_on_hd
+        responsive_center_on_smartphone\" id=\"leaderboardOthers\">     \n        <div
+        id='ad_topslot_a' class='am-default'>\n                    <script type='text/javascript'>\n
+        \           googletag.cmd.push(function() { googletag.display('ad_topslot_a');
+        });\n            </script>\n                    </div>\n    </div>\n        <div
+        class=\"responsive_row\">\n            <div class=\"responsive_entry_left\">
+        \    \n        <div id='ad_leftslot_a' class='am-default'>\n                    <script
+        type='text/javascript'>\n            googletag.cmd.push(function() { googletag.display('ad_leftslot_a');
+        });\n            </script>\n                    </div>\n    </div>\n\n                        <div
+        class=\"responsive_entry_center\">\n                            <div class=\"responsive_display_on_hd\"
+        id=\"leaderboardHD\">     \n        <div id='ad_topslot_b' class='am-default'>\n
+        \                   <script type='text/javascript'>\n            googletag.cmd.push(function()
+        { googletag.display('ad_topslot_b'); });\n            </script>\n                    </div>\n
+        \   </div>\n                <div class=\"responsive_entry_center_wrap\">\n\n
+        \                   \n                    <div id=\"ox-wrapper\" class=\"responsive_entry_center_left\">\n
+        \                       <div id=\"main_column\" class=\"responsive_row\">\n
+        \                           <div id=\"main-container\" class=\"main-container\">\n
+        \                               \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<div
+        class=\"results\">\n    <h1 style=\"font-size:24px; font-weight:bold; margin-bottom:
+        12px;\">asdf1</h1>\n    <p>Word not found in the dictionary</p>\n</div>\n\n\n
+        \   <div class=\"browse-words\">\n        <p>You can also browse words beginning
+        with <span style=\"font-weight:bold; \">a</span></p>\n        <ul>\n                    <li>\n
+        \               <a href=\"http://www.oxfordlearnersdictionaries.com/browse/english/a/a_2/\"
+        title=\"a noun...Abbotsford\"><DATA class=\"hwd\">a <pos>noun</pos></DATA>...<DATA
+        class=\"hwd\">Abbotsford</DATA></a>\n            </li>\n                </ul><br/>\n
+        \   </div>\n\n<div class=\"link-to-homepage\">\n    <p>Find more information
+        about this website at: <a href=\"http://www.oxfordlearnersdictionaries.com/\"
+        title=\"Dictionary homepage\">www.oxfordlearnersdictionaries.com</a>.</p>\n</div>\n\n
+        \                           </div>\n\n                            <div class=\"responsive_hide_on_smartphone
+        responsive_center\" id=\"btmOthers\">     \n        <div id='ad_btmslot_a'
+        class='am-default'>\n                    <script type='text/javascript'>\n
+        \           googletag.cmd.push(function() { googletag.display('ad_btmslot_a');
+        });\n            </script>\n                    </div>\n    </div>\n                        </div>\n
+        \                   </div>\n                    <div id=\"rightcolumn\" class=\"responsive_entry_center_right\">\n
+        \                       \n\n\n\n<div class=\"responsive_display_on_smartphone
+        responsive_center_on_smartphone\" id=\"btmSmartphone\">     \n        <div
+        id='ad_btmslot_b' class='am-default'>\n                    <script type='text/javascript'>\n
+        \           googletag.cmd.push(function() { googletag.display('ad_btmslot_b');
+        });\n            </script>\n                    </div>\n    </div>\n\n<div
+        class=\"responsive_row\">\n         \n            <div class='responsive_center_on_smartphone'>\n
+        \       <div id='ad_houseslot1_a' class='am-default'>\n                    <script
+        type='text/javascript'>\n            googletag.cmd.push(function() { googletag.display('ad_houseslot1_a');
+        });\n            </script>\n                    </div>\n    </div></div>                    </div>\n
+        \               </div>\n                \n                        </div>\n
+        \                       \n        </div>\n    </div>\n    <div id=\"ox-footer\"
+        class=\"responsive_row oup-footer\">\n<div class=\"responsive_container\">\n\n
+        \   <div class=\"responsive_footer_top\">\n        <div class=\"responsive_center_on_smartphone\">\n
+        \           <div class=\"slt-logo\"><img src=\"http://www.oxfordlearnersdictionaries.com/external/images/footer/logo-slt.png\"
+        title=\"Shaping Learning Together\" alt=\"Shaping Learning Together\"/></div>\n
+        \           <div class=\"btn icon-left social-facebook\"><a href=\"https://www.facebook.com/oupeltglobal\">Find
+        us on Facebook</a></div>\n            <div class=\"btn icon-left social-twitter\"><a
+        href=\"https://twitter.com/OUPELTGlobal\">Follow us on Twitter</a></div>\n
+        \           <ul class='links'>\n                <li><a href=\"https://elt.oup.com/\"
+        onclick=\"return ! window.open(this.href);\">OUP English Language Teaching</a></li>\n
+        \               <li><a href=\"https://www.oxfordlearnersbookshelf.com/home/homePage.html\"
+        onclick=\"return ! window.open(this.href);\">Oxford Learner&apos;s Bookshelf</a></li>\n
+        \           </ul>\n        </div>\n    </div>\n    <div class=\"responsive_footer_bottom\">\n
+        \       <div class=\"responsive_center_on_smartphone\">\n            <a href=\"http://global.oup.com/\"
+        onclick=\"return ! window.open(this.href);\" class=\"oup-logo\" title=\"Oxford
+        University Press\"><img src=\"http://www.oxfordlearnersdictionaries.com/external/images/footer/logo-oup.png\"
+        title=\"Oxford University Press\"/></a>\n            <div class=\"responsive_footer_bottom_wrap\">\n
+        \               <ul class='links'>\n                    <li><a href=\"http://www.oxfordlearnersdictionaries.com/search_widget_info\">Search
+        Box</a></li>\n                    <li><a href=\"http://www.oxfordlearnersdictionaries.com/browse/\">Browse
+        Dictionaries</a></li>\n                    <li><a href=\"http://www.oxfordlearnersdictionaries.com/contact-us\">Contact
+        Us</a></li>\n                    <li><a href=\"http://www.oxfordlearnersdictionaries.com/legal-notice\">Legal
+        Notice</a></li>\n                    <li><a href=\"http://www.oxfordlearnersdictionaries.com/privacy\">Privacy
+        Policy</a></li>\n                    <li><a href=\"http://global.oup.com/cookiepolicy\">Cookie
+        Policy</a></li>\n                    <li><a href=\"http://www.oxfordlearnersdictionaries.com/terms-and-conditions\">Terms
+        & Conditions</a></li>\n\t\t\t\t\t<li><a href=\"http://www.oxfordlearnersdictionaries.com/system-requirements\">System
+        Requirements</a></li>\n                    <li><a href=\"https://elt.oup.com/accessibility\"
+        onclick=\"return ! window.open(this.href);\">Accessibility</a></li>\n                </ul>\n
+        \               <p class=\"copyright\">&copy; 2015 Oxford University Press</p>\n
+        \           </div>\n            <div class=\"versionSelector\">\n                <select
+        name=\"lang\" id=\"headerVersion\" title=\"Select language\">\n                                                                                                                                                                        <option
+        \ \n                             selected=\"selected\"                             name=\"uk\"\n
+        \                           value=\"http://www.oxfordlearnersdictionaries.com/definition/english/asdf1\">English
+        (UK)</option>\n                                                                                                                                                                                                <option
+        \ \n                                                        name=\"us\"\n
+        \                           value=\"http://www.oxfordlearnersdictionaries.com/us/definition/english/asdf1\">English
+        (US)</option>\n                                                                                                                                                                                                        </select>\n
+        \           </div>\n        </div>\n    </div>\n\n</div>\n</div>\n\n\n\n    <script
+        language=\"javascript\" type=\"text/javascript\" src=\"http://www.oxfordlearnersdictionaries.com/external/scripts/doubleclick.js?version=1.5.1\"></script>\n\n
+        \       <script language=\"javascript\" type=\"text/javascript\">\n\n        $(document).ready(function()
+        { setupDoubleClick('http://www.oxfordlearnersdictionaries.com/', 'english',
+        false, 'main-container', null, null, null); });\n        $('img.over').each(function(){\n
+        \           var t=$(this);\n            var src1= t.attr('src'); // initial
+        src\n            var newSrc = src1.substring(0, src1.lastIndexOf('.')); //
+        let's get file name without extension\n            t.hover(function(){\n                $(this).attr('src',
+        newSrc+ '-over.' + /[^.]+$/.exec(src1)); //last part is for extension\n            },
+        function(){\n                $(this).attr('src', newSrc + '.' + /[^.]+$/.exec(src1));
+        //removing '-over' from the name\n            });\n        });\n    </script>\n
+        \   <script type=\"text/javascript\" src=\"https://apis.google.com/js/plusone.js\"></script>\n\n
+        \   <script language=\"javascript\" type=\"text/javascript\" src=\"http://www.oxfordlearnersdictionaries.com/external/scripts/responsive.js?version=1.5.1\"></script>\n
+        \   <script>\n  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n
+        \ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n
+        \ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n
+        \ })(window,document,'script','//www.google-analytics.com/analytics.js','ga');\n\n
+        \ ga('create', 'UA-13175707-1',\n     {\n        'siteSpeedSampleRate': 10\n
+        \    });\n  ga('send', 'pageview');\n</script>\n\n        <script type=\"text/javascript\">_qoptions={
+        qacct:\"p-cfSla1Cke_iBQ\" };</script>\n    <script type=\"text/javascript\"
+        src=\"http://edge.quantserve.com/quant.js\"></script>\n    <noscript><img
+        src=\"http://pixel.quantserve.com/pixel/p-cfSla1Cke_iBQ.gif\" style=\"display:
+        none;\" border=\"0\" height=\"1\" width=\"1\" alt=\"Quantcast\"/></noscript>\n\n</body>\n</html>\n"
+    http_version: 
+  recorded_at: Tue, 31 Mar 2015 13:18:15 GMT
+recorded_with: VCR 2.9.3

@@ -4,9 +4,12 @@ describe OxfordLearnersDictionaries::English, :vcr do
 
   let(:word) { "word" }
   let(:formatted_word)    { word.strip.gsub(' ', '-') }
-  let(:param_word)       { formatted_word.gsub('-', '+') }
+  let(:param_word)        { formatted_word.gsub('-', '+') }
+
   let(:dictionary) { described_class.new(word) }
-  let(:url)     { "http://www.oxfordlearnersdictionaries.com/definition/english/#{formatted_word}?q=#{param_word}" }
+  let(:url_1)      { "http://www.oxfordlearnersdictionaries.com/definition/english/#{formatted_word}?q=#{param_word}" }
+  let(:url_2)      { "http://www.oxfordlearnersdictionaries.com/definition/english/#{formatted_word}1?q=#{param_word}" }
+  let(:urls)       { [ url_1, url_2 ] }
 
   describe '.initialize' do
 
@@ -14,8 +17,8 @@ describe OxfordLearnersDictionaries::English, :vcr do
       expect(dictionary.word).to eq word
     end
 
-    it 'initializes @url' do
-      expect(dictionary.url).to eq url
+    it 'initializes @urls' do
+      expect(dictionary.urls).to eq urls
     end
 
     it 'initializes @definition' do
@@ -25,7 +28,7 @@ describe OxfordLearnersDictionaries::English, :vcr do
 
   describe '#look_up' do
     it 'open url and parse data' do
-      stub_request(:any, url).to_return(body: "fpgentil")
+      stub_request(:any, url_1).to_return(body: "fpgentil")
       expect(dictionary).to receive(:parse).and_return(true)
       dictionary.look_up
     end
@@ -128,7 +131,7 @@ describe OxfordLearnersDictionaries::English, :vcr do
 
   describe 'when the word is not found' do
     before :each do
-      stub_request(:any, url).to_raise(OpenURI::HTTPError.new('', nil))
+      stub_request(:any, url_1).to_raise(OpenURI::HTTPError.new('', nil))
     end
     let(:word) { 'asdf' }
 
