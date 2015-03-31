@@ -2,12 +2,12 @@ require 'spec_helper'
 
 describe OxfordLearnersDictionaries::WordOfTheDay, :vcr do
 
-  let(:word) { 'intangible' }
+  let(:word) { 'surpass' }
   let(:wotd) { described_class.new }
 
   let(:formatted_word)   { word.strip.gsub(' ', '-') }
   let(:param_word)       { formatted_word.gsub('-', '+') }
-  let(:short_definition) { 'that exists but that is difficult to describe' }
+  let(:short_definition) { 'to do or be better than someone or' }
 
   let(:url)          { 'http://www.oxfordlearnersdictionaries.com' }
   let(:word_url)     { "http://www.oxfordlearnersdictionaries.com/definition/english/#{formatted_word}?q=#{param_word}" }
@@ -45,7 +45,7 @@ describe OxfordLearnersDictionaries::WordOfTheDay, :vcr do
         wotd.look_up
       end
 
-      let(:definition) { 'something that does not exist as a physical thing but is still valuable to a company' }
+      let(:definition) { 'to do or be better than somebody/something' }
 
       it 'matches description count' do
         expect(wotd.english.count).to eq 1
