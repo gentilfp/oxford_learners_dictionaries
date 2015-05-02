@@ -3,7 +3,7 @@ require 'open-uri'
 
 module OxfordLearnersDictionaries
   class English
-    attr_reader :definition, :type, :urls, :word
+    attr_reader :definition, :type, :urls, :word, :examples
 
     def initialize word
       formatted_word = word.strip.gsub(' ', '-') rescue ''
@@ -13,6 +13,7 @@ module OxfordLearnersDictionaries
       @urls = [ main_url, main_url.gsub('?q=', '1?q=') ]
       @word = formatted_word
       @definition = Hash.new
+      @examples = Hash.new
     end
 
     def look_up
@@ -34,6 +35,7 @@ module OxfordLearnersDictionaries
     private
     def parse
       parse_type
+      parse_examples
       if @page.css('.num').count > 0
         parse_multiple_definitions
       else
@@ -53,12 +55,15 @@ module OxfordLearnersDictionaries
 
     def parse_multiple_definitions
       @page.css('.num').count.times do |index|
-        @definition["definition_#{index}".to_sym] = @page.css('.def')[index].text
+        @definition[:"definition_#{index}"] = @page.css('.def')[index].text
+      end
+    end
+
+    def parse_examples
+      @page.css(".x-g").each_with_index do |example, index|
+        @examples[:"examples_#{index}"] = example.text.strip.capitalize
       end
     end
   end
 end
 
-# definition.css(".x-g").each do |examples|
-#   puts "# #{examples.css(".x").text}"
-# end
