@@ -12,8 +12,6 @@ module OxfordLearnersDictionaries
 
       @urls = [ main_url, main_url.gsub('?q=', '1?q=') ]
       @word = formatted_word
-      @definition = Hash.new
-      @examples = Hash.new
     end
 
     def look_up
@@ -34,35 +32,10 @@ module OxfordLearnersDictionaries
 
     private
     def parse
-      parse_type
-      parse_examples
-      if @page.css('.num').count > 0
-        parse_multiple_definitions
-      else
-        parse_single_definition
-      end
-      self
-    end
-
-    def parse_type
-      @type = @page.css('.pos').first.text rescue 'unknown'
-    end
-
-    def parse_single_definition
-      definitions =  @page.css('.def')
-      @definition[:definition_0] = definitions.count > 0 ? definitions[0].text : definitions.text
-    end
-
-    def parse_multiple_definitions
-      @page.css('.num').count.times do |index|
-        @definition[:"definition_#{index}"] = @page.css('.def')[index].text
-      end
-    end
-
-    def parse_examples
-      @page.css(".x-g").each_with_index do |example, index|
-        @examples[:"examples_#{index}"] = example.text.strip.capitalize
-      end
+      @definition = Definition.new(@page).parse
+      # parse_type
+      # parse_examples
+      # self
     end
   end
 end
