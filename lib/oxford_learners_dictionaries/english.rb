@@ -1,5 +1,6 @@
 require 'nokogiri'
 require 'open-uri'
+require 'pry-meta'
 
 module OxfordLearnersDictionaries
   class English
@@ -12,6 +13,7 @@ module OxfordLearnersDictionaries
 
       @urls = [ main_url, main_url.gsub('?q=', '1?q=') ]
       @word = formatted_word
+      @definition = Array.new
     end
 
     def look_up
@@ -23,19 +25,31 @@ module OxfordLearnersDictionaries
           @page = nil
         end
       end
-      return {} if @page.nil?
+      return nil if @page.nil?
 
-      @page.css('.idm-gs').remove
       parse
-      self.definition
     end
 
     private
     def parse
-      @definition = Definition.new(@page).parse
-      # parse_type
-      # parse_examples
-      # self
+      @page.css('.idm-gs').remove
+      @type = ::OxfordLearnersDictionaries::Type.new(@page).parse
+
+      if @page.css('.num').count > 0
+        parse_multiple_definitions
+      else
+        parse_single_definition
+      end
+    end
+
+    def parse_single_definition
+      @definition.push(::OxfordLearnersDictionaries::Definition.new(@page).parse_single_definition)
+    end
+
+    def parse_multiple_definitions
+      @page.css('.num').count.times do |index|
+        @definition.push(::OxfordLearnersDictionaries::Definition.new(@page).parse_multiple_definitions(index))
+      end
     end
   end
 end
