@@ -1,13 +1,13 @@
 require 'spec_helper'
 
-describe OxfordLearnersDictionaries::WordOfTheDay, :vcr do
+describe OxfordLearnersDictionaries::WordOfTheDay do
 
-  let(:word) { 'surpass' }
+  let(:word) { 'eye-catching' }
   let(:wotd) { described_class.new }
 
   let(:formatted_word)   { word.strip.gsub(' ', '-') }
   let(:param_word)       { formatted_word.gsub('-', '+') }
-  let(:short_definition) { 'to do or be better than someone or' }
+  let(:short_definition) { 'immediately noticeable because it is' }
 
   let(:url)          { 'http://www.oxfordlearnersdictionaries.com' }
   let(:word_url)     { "http://www.oxfordlearnersdictionaries.com/definition/english/#{formatted_word}?q=#{param_word}" }
@@ -45,11 +45,11 @@ describe OxfordLearnersDictionaries::WordOfTheDay, :vcr do
         wotd.look_up
       end
 
-      let(:definition) { 'to do or be better than somebody/something' }
+      let(:definition) { 'immediately noticeable because it is particularly interesting, bright or attractive' }
 
       it 'matches description count' do
         expect(wotd.english.count).to eq 1
-        expect(wotd.english.to_s).to match definition
+        expect(wotd.english.first.signification).to match definition
       end
     end
   end
