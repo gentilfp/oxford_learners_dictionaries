@@ -7,9 +7,10 @@ module OxfordLearnersDictionaries
     end
 
     def parse
-      @page.css(".x-g").each_with_index do |example, index|
-        @examples[:"examples_#{index}"] = example.text.strip.capitalize
+      @page.css('.x-g').each do |example|
+        @examples = example.text
       end
+      self
     end
   end
 end
