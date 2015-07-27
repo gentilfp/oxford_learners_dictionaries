@@ -18,6 +18,8 @@ module OxfordLearnersDictionaries
 
     def parse_multiple_definitions index
       @signification = @page.css('.def')[index].text
+      return self if @page.css('.x-gs')[index].nil?
+
       @page.css('.x-gs')[index].css('.x-g').each do |example|
         @examples.push(::OxfordLearnersDictionaries::Example.new(example))
       end
