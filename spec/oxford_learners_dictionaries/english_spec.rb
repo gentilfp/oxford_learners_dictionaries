@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe OxfordLearnersDictionaries::English do
+describe OxfordLearnersDictionaries::English, :vcr do
 
   let(:word) { "word" }
   let(:formatted_word)    { word.strip.gsub(' ', '-') }

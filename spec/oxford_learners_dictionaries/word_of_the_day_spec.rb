@@ -1,13 +1,13 @@
 require 'spec_helper'
 
-describe OxfordLearnersDictionaries::WordOfTheDay do
+describe OxfordLearnersDictionaries::WordOfTheDay, :vcr do
 
-  let(:word) { 'eye-catching' }
+  let(:word) { 'exemplary' }
   let(:wotd) { described_class.new }
 
   let(:formatted_word)   { word.strip.gsub(' ', '-') }
   let(:param_word)       { formatted_word.gsub('-', '+') }
-  let(:short_definition) { 'immediately noticeable because it is' }
+  let(:short_definition) { 'providing a good example for people' }
 
   let(:url)          { 'http://www.oxfordlearnersdictionaries.com' }
   let(:word_url)     { "http://www.oxfordlearnersdictionaries.com/definition/english/#{formatted_word}?q=#{param_word}" }
@@ -45,11 +45,19 @@ describe OxfordLearnersDictionaries::WordOfTheDay do
         wotd.look_up
       end
 
-      let(:definition) { 'immediately noticeable because it is particularly interesting, bright or attractive' }
+      let(:definition) { 'providing a good example for people to copy' }
+      let(:example) { 'Her behaviour was exemplary.' }
 
-      it 'matches description count' do
-        expect(wotd.english.count).to eq 1
-        expect(wotd.english.first.signification).to match definition
+      let(:first_signification) { wotd.english.definition.first.signification }
+      let(:first_example) { wotd.english.definition.first.examples.first.sentence }
+
+      it 'matches description' do
+        expect(wotd.english.definition.count).to eq 2
+        expect(first_signification).to match definition
+      end
+
+      it 'matches example' do
+        expect(first_example).to match example
       end
     end
   end
