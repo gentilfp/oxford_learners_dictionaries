@@ -1,6 +1,5 @@
 require 'nokogiri'
 require 'open-uri'
-require 'pry-meta'
 
 module OxfordLearnersDictionaries
   class English
@@ -14,6 +13,7 @@ module OxfordLearnersDictionaries
       @urls = [ main_url, main_url.gsub('?q=', '1?q=') ]
       @word = formatted_word
       @definition = Array.new
+      self
     end
 
     def look_up
@@ -28,6 +28,7 @@ module OxfordLearnersDictionaries
       return nil if @page.nil?
 
       parse
+      self
     end
 
     private
