@@ -1,16 +1,14 @@
 module OxfordLearnersDictionaries
   class Example
-    attr_reader :example
+    attr_reader :sentence
 
     def initialize page
       @page = page
+      parse
     end
 
     def parse
-      @page.css('.x-g').each do |example|
-        @examples = example.text
-      end
-      self
+      @sentence = @page.text.strip
     end
   end
 end
