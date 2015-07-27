@@ -20,10 +20,6 @@ describe OxfordLearnersDictionaries::English, :vcr do
     it 'initializes @urls' do
       expect(dictionary.urls).to eq urls
     end
-
-    it 'initializes @definition' do
-      expect(dictionary.definition).to eq Hash.new
-    end
   end
 
   describe '#look_up' do
@@ -34,7 +30,7 @@ describe OxfordLearnersDictionaries::English, :vcr do
     end
   end
 
-  describe "looking up a word" do
+  context "looking up" do
     before :each do
       dictionary.look_up
     end
@@ -49,7 +45,7 @@ describe OxfordLearnersDictionaries::English, :vcr do
           expect(dictionary.type).to eq type
         end
 
-        it 'counts 3 definitions' do
+        it 'counts 42 definitions' do
           expect(dictionary.definition.count).to eq count
         end
       end
@@ -80,9 +76,9 @@ describe OxfordLearnersDictionaries::English, :vcr do
       end
 
       it 'shows all definitions in Hash' do
-        expect(dictionary.definition[:definition_0]).to eq definition_0
-        expect(dictionary.definition[:definition_1]).to eq definition_1
-        expect(dictionary.definition[:definition_2]).to eq definition_2
+        expect(dictionary.definition[0].signification).to eq definition_0
+        expect(dictionary.definition[1].signification).to eq definition_1
+        expect(dictionary.definition[2].signification).to eq definition_2
       end
     end
 
@@ -95,7 +91,7 @@ describe OxfordLearnersDictionaries::English, :vcr do
       end
 
       it 'shows definition in Hash' do
-        expect(dictionary.definition[:definition_0]).to match definition
+        expect(dictionary.definition[0].signification).to match definition
       end
     end
 
@@ -136,7 +132,7 @@ describe OxfordLearnersDictionaries::English, :vcr do
     let(:word) { 'asdf' }
 
     it 'returns empty' do
-      expect(dictionary.look_up).to be_empty
+      expect(dictionary.look_up).to be_nil
     end
   end
 end

@@ -19,9 +19,9 @@ http_interactions:
       message: Not Found
     headers:
       Server:
-      - nginx/1.7.7
+      - nginx
       Date:
-      - Tue, 31 Mar 2015 13:18:15 GMT
+      - Mon, 27 Jul 2015 12:51:10 GMT
       Content-Type:
       - text/html;charset=UTF-8
       Transfer-Encoding:
@@ -29,8 +29,8 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - JSESSIONID=B13B079E8DFA26946ABEB27D85FD777C; Path=/; HttpOnly
-      - session=d3f6ad59a1c9be42babf26b6adc38e72; domain=.oxfordlearnersdictionaries.com;
+      - JSESSIONID=F6E343C2440211CDED5DF61854A4718F; Path=/; HttpOnly
+      - session=68363f70839fab8d0bde84ee6fc635a3; domain=.oxfordlearnersdictionaries.com;
         path=/
       Content-Language:
       - en
@@ -47,12 +47,12 @@ http_interactions:
         asdf1, Oxford Advanced Learner&apos;s Dictionary \" />\n        <meta name=\"robots\"
         content=\"noindex,follow\" />\n            <meta http-equiv=\"X-UA-Compatible\"
         content=\"IE=edge\" />\n    <meta name='viewport' content='width=device-width,
-        initial-scale=1'>\n    <link href=\"http://www.oxfordlearnersdictionaries.com/external/styles/interface.css?version=1.5.1\"
-        rel=\"stylesheet\" type=\"text/css\" />\n    <link href=\"http://www.oxfordlearnersdictionaries.com/external/styles/responsive.css?version=1.5.1\"
-        rel=\"stylesheet\" type=\"text/css\" />\n    <link href=\"http://www.oxfordlearnersdictionaries.com/external/styles/oxford.css?version=1.5.1\"
-        rel=\"stylesheet\" type=\"text/css\" />\n    <link href=\"http://www.oxfordlearnersdictionaries.com/external/styles/jquery.lightbox-0.5.css?version=1.5.1\"
-        rel=\"stylesheet\" type=\"text/css\" />\n    <link href=\"http://www.oxfordlearnersdictionaries.com/external/styles/print.css?version=1.5.1\"
-        rel=\"stylesheet\" type=\"text/css\"  media=\"print\" />\n    <link href=\"http://www.oxfordlearnersdictionaries.com/external/styles/autocomplete.css?version=1.5.1\"
+        initial-scale=1'>\n    <link href=\"http://www.oxfordlearnersdictionaries.com/external/styles/interface.css?version=1.5.13\"
+        rel=\"stylesheet\" type=\"text/css\" />\n    <link href=\"http://www.oxfordlearnersdictionaries.com/external/styles/responsive.css?version=1.5.13\"
+        rel=\"stylesheet\" type=\"text/css\" />\n    <link href=\"http://www.oxfordlearnersdictionaries.com/external/styles/oxford.css?version=1.5.13\"
+        rel=\"stylesheet\" type=\"text/css\" />\n    <link href=\"http://www.oxfordlearnersdictionaries.com/external/styles/jquery.lightbox-0.5.css?version=1.5.13\"
+        rel=\"stylesheet\" type=\"text/css\" />\n    <link href=\"http://www.oxfordlearnersdictionaries.com/external/styles/print.css?version=1.5.13\"
+        rel=\"stylesheet\" type=\"text/css\"  media=\"print\" />\n    <link href=\"http://www.oxfordlearnersdictionaries.com/external/styles/autocomplete.css?version=1.5.13\"
         rel=\"stylesheet\" type=\"text/css\" />\n            <script type='text/javascript'>\n
         \           var googletag = googletag || {};\n            googletag.cmd =
         googletag.cmd || [];\n            var dfpSlots = {};\n            (function()
@@ -137,11 +137,11 @@ http_interactions:
         (newResolution != curResolution) {\n                                        curResolution
         = newResolution;\n                    googletag.pubads().refresh();\n                }\n
         \           };\n        </script>\n    <!--[if gte IE 7 ]>\n        <link
-        href=\"http://www.oxfordlearnersdictionaries.com/external/styles/oxford-ie.css?version=1.5.1\"
+        href=\"http://www.oxfordlearnersdictionaries.com/external/styles/oxford-ie.css?version=1.5.13\"
         rel=\"stylesheet\" type=\"text/css\" />\n    <![endif]-->\n    <!--[if IE
-        9]><script type=\"text/javascript\" src=\"http://www.oxfordlearnersdictionaries.com/external/scripts/matchMedia.js?version=1.5.1\"></script><![endif]-->\n
-        \       <link rel=\"icon\" type=\"image/x-icon\" href=\"http://www.oxfordlearnersdictionaries.com/external/images/favicon.ico?version=1.5.1\"/>\n
-        \   <script language=\"JavaScript\" type=\"text/javascript\" src=\"http://www.oxfordlearnersdictionaries.com/common.js?version=1.5.1\"></script>\n</head>\n<body
+        9]><script type=\"text/javascript\" src=\"http://www.oxfordlearnersdictionaries.com/external/scripts/matchMedia.js?version=1.5.13\"></script><![endif]-->\n
+        \       <link rel=\"icon\" type=\"image/x-icon\" href=\"http://www.oxfordlearnersdictionaries.com/external/images/favicon.ico?version=1.5.13\"/>\n
+        \   <script language=\"JavaScript\" type=\"text/javascript\" src=\"http://www.oxfordlearnersdictionaries.com/common.js?version=1.5.13\"></script>\n</head>\n<body
         >\n    <noscript>\n        <div id=\"cookieLaw\">We use cookies to enhance
         your experience on our website. By continuing to use our website, you are
         agreeing to our use of cookies. You can change your cookie settings at any
@@ -158,7 +158,7 @@ http_interactions:
         Wordlists</a></li>\r\n                         <li><a  href=\"http://www.oxfordlearnersdictionaries.com/about/\">About</a></li>\r\n
         \                        <li><a  href=\"http://www.oxfordlearnersdictionaries.com/faq/\">FAQ</a></li>\r\n
         \       </ul>\r\n        \r\n                    <div class=\"menu login-circle
-        \">\r\n                <ul>\r\n                    <li><a href=\"http://www.oxfordlearnersdictionaries.com/account/login\">Log
+        \">\r\n                <ul>\r\n                    <li><a href=\"http://www.oxfordlearnersdictionaries.com/account/checkCookie?preUrl=/account/login\">Log
         in or Get Premium</a></li>\r\n                </ul>\r\n            </div>\r\n
         \       </div>\r\n<a class='go-to-top responsive_display_on_smartphone' href='#wrap'
         title='back to top'>Back to Top</a>\r\n</div>\n<div class=\"responsive_container
@@ -256,7 +256,7 @@ http_interactions:
         \                           value=\"http://www.oxfordlearnersdictionaries.com/us/definition/english/asdf1\">English
         (US)</option>\n                                                                                                                                                                                                        </select>\n
         \           </div>\n        </div>\n    </div>\n\n</div>\n</div>\n\n\n\n    <script
-        language=\"javascript\" type=\"text/javascript\" src=\"http://www.oxfordlearnersdictionaries.com/external/scripts/doubleclick.js?version=1.5.1\"></script>\n\n
+        language=\"javascript\" type=\"text/javascript\" src=\"http://www.oxfordlearnersdictionaries.com/external/scripts/doubleclick.js?version=1.5.13\"></script>\n\n
         \       <script language=\"javascript\" type=\"text/javascript\">\n\n        $(document).ready(function()
         { setupDoubleClick('http://www.oxfordlearnersdictionaries.com/', 'english',
         false, 'main-container', null, null, null); });\n        $('img.over').each(function(){\n
@@ -267,7 +267,7 @@ http_interactions:
         function(){\n                $(this).attr('src', newSrc + '.' + /[^.]+$/.exec(src1));
         //removing '-over' from the name\n            });\n        });\n    </script>\n
         \   <script type=\"text/javascript\" src=\"https://apis.google.com/js/plusone.js\"></script>\n\n
-        \   <script language=\"javascript\" type=\"text/javascript\" src=\"http://www.oxfordlearnersdictionaries.com/external/scripts/responsive.js?version=1.5.1\"></script>\n
+        \   <script language=\"javascript\" type=\"text/javascript\" src=\"http://www.oxfordlearnersdictionaries.com/external/scripts/responsive.js?version=1.5.13\"></script>\n
         \   <script>\n  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n
         \ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n
         \ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n
@@ -279,5 +279,5 @@ http_interactions:
         src=\"http://pixel.quantserve.com/pixel/p-cfSla1Cke_iBQ.gif\" style=\"display:
         none;\" border=\"0\" height=\"1\" width=\"1\" alt=\"Quantcast\"/></noscript>\n\n</body>\n</html>\n"
     http_version: 
-  recorded_at: Tue, 31 Mar 2015 13:18:15 GMT
+  recorded_at: Mon, 27 Jul 2015 12:51:31 GMT
 recorded_with: VCR 2.9.3

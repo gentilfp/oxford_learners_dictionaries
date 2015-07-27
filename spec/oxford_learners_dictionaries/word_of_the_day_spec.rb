@@ -2,12 +2,12 @@ require 'spec_helper'
 
 describe OxfordLearnersDictionaries::WordOfTheDay, :vcr do
 
-  let(:word) { 'surpass' }
+  let(:word) { 'exemplary' }
   let(:wotd) { described_class.new }
 
   let(:formatted_word)   { word.strip.gsub(' ', '-') }
   let(:param_word)       { formatted_word.gsub('-', '+') }
-  let(:short_definition) { 'to do or be better than someone or' }
+  let(:short_definition) { 'providing a good example for people' }
 
   let(:url)          { 'http://www.oxfordlearnersdictionaries.com' }
   let(:word_url)     { "http://www.oxfordlearnersdictionaries.com/definition/english/#{formatted_word}?q=#{param_word}" }
@@ -45,11 +45,19 @@ describe OxfordLearnersDictionaries::WordOfTheDay, :vcr do
         wotd.look_up
       end
 
-      let(:definition) { 'to do or be better than somebody/something' }
+      let(:definition) { 'providing a good example for people to copy' }
+      let(:example) { 'Her behaviour was exemplary.' }
 
-      it 'matches description count' do
-        expect(wotd.english.count).to eq 1
-        expect(wotd.english.to_s).to match definition
+      let(:first_signification) { wotd.english.definition.first.signification }
+      let(:first_example) { wotd.english.definition.first.examples.first.sentence }
+
+      it 'matches description' do
+        expect(wotd.english.definition.count).to eq 2
+        expect(first_signification).to match definition
+      end
+
+      it 'matches example' do
+        expect(first_example).to match example
       end
     end
   end

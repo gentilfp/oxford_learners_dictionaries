@@ -12,8 +12,8 @@ module OxfordLearnersDictionaries
 
       @urls = [ main_url, main_url.gsub('?q=', '1?q=') ]
       @word = formatted_word
-      @definition = Hash.new
-      @examples = Hash.new
+      @definition = Array.new
+      self
     end
 
     def look_up
@@ -25,43 +25,31 @@ module OxfordLearnersDictionaries
           @page = nil
         end
       end
-      return {} if @page.nil?
+      return nil if @page.nil?
 
-      @page.css('.idm-gs').remove
       parse
-      self.definition
+      self
     end
 
     private
     def parse
-      parse_type
-      parse_examples
+      @page.css('.idm-gs').remove
+      @type = ::OxfordLearnersDictionaries::Type.new(@page).parse
+
       if @page.css('.num').count > 0
         parse_multiple_definitions
       else
         parse_single_definition
       end
-      self
-    end
-
-    def parse_type
-      @type = @page.css('.pos').first.text rescue 'unknown'
     end
 
     def parse_single_definition
-      definitions =  @page.css('.def')
-      @definition[:definition_0] = definitions.count > 0 ? definitions[0].text : definitions.text
+      @definition.push(::OxfordLearnersDictionaries::Definition.new(@page).parse_single_definition)
     end
 
     def parse_multiple_definitions
       @page.css('.num').count.times do |index|
-        @definition[:"definition_#{index}"] = @page.css('.def')[index].text
-      end
-    end
-
-    def parse_examples
-      @page.css(".x-g").each_with_index do |example, index|
-        @examples[:"examples_#{index}"] = example.text.strip.capitalize
+        @definition.push(::OxfordLearnersDictionaries::Definition.new(@page).parse_multiple_definitions(index))
       end
     end
   end
