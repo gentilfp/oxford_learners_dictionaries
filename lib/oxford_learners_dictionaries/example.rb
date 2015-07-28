@@ -1,6 +1,6 @@
 module OxfordLearnersDictionaries
   class Example
-    attr_reader :sentence
+    attr_reader :text
 
     def initialize page
       @page = page
@@ -8,7 +8,7 @@ module OxfordLearnersDictionaries
     end
 
     def parse
-      @sentence = @page.text.strip
+      @text = @page.text.strip
     end
   end
 end

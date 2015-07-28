@@ -21,14 +21,14 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 27 Jul 2015 12:51:11 GMT
+      - Tue, 28 Jul 2015 13:02:20 GMT
       Content-Length:
       - '0'
       Connection:
       - keep-alive
       Set-Cookie:
-      - localisation=BR; Expires=Sat, 16-Jul-2016 12:51:11 GMT; Path=/
-      - session=68363f70839fab8d0bde84ee6fc635a3; domain=.oxfordlearnersdictionaries.com;
+      - localisation=BR; Expires=Sun, 17-Jul-2016 13:02:20 GMT; Path=/
+      - session=d3f6ad59a1c9be42babf26b6adc38e72; domain=.oxfordlearnersdictionaries.com;
         path=/
       Location:
       - http://www.oxfordlearnersdictionaries.com/us/
@@ -36,7 +36,7 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 27 Jul 2015 12:51:31 GMT
+  recorded_at: Tue, 28 Jul 2015 13:02:43 GMT
 - request:
     method: get
     uri: http://www.oxfordlearnersdictionaries.com/us/
@@ -58,7 +58,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 27 Jul 2015 12:51:11 GMT
+      - Tue, 28 Jul 2015 13:02:20 GMT
       Content-Type:
       - text/html;charset=UTF-8
       Content-Length:
@@ -66,9 +66,9 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - JSESSIONID=2C25741D5B2358FCCCF822CFAF07B13C; Path=/; HttpOnly
-      - localisation=BR; Expires=Sat, 16-Jul-2016 12:51:11 GMT; Path=/
-      - session=68363f70839fab8d0bde84ee6fc635a3; domain=.oxfordlearnersdictionaries.com;
+      - JSESSIONID=4AC73AF71FFCB55BBCDA00A0C4251A7E; Path=/; HttpOnly
+      - localisation=BR; Expires=Sun, 17-Jul-2016 13:02:20 GMT; Path=/
+      - session=d3f6ad59a1c9be42babf26b6adc38e72; domain=.oxfordlearnersdictionaries.com;
         path=/
       Content-Language:
       - en
@@ -423,11 +423,11 @@ http_interactions:
         b3JkbGVhcm5lcnNkaWN0aW9uYXJpZXMuY29tL3VzL3dvdGQvYW1lcmljYW5f
         ZW5nbGlzaC93b3RkcnNzLnhtbCIgdGFyZ2V0PSJfYmxhbmsiPjwvYT4KICAg
         IDwvZGl2PgogICAgPGRpdiBpZD0iZGF5Ym94Ij4KICAgICAgICA8aDIgY2xh
-        c3M9J2gnPmV4ZW1wbGFyeTwvaDI+PGRpdiBjbGFzcz0nZCc+cHJvdmlkaW5n
-        IGEgZ29vZCBleGFtcGxlIGZvciBwZW9wbGUmaGVsbGlwOzwvZGl2PgogICAg
-        ICAgIDxkaXYgY2xhc3M9ImJ0biI+CiAgICAgICAgICAgIDxhIGhyZWY9Imh0
-        dHA6Ly93d3cub3hmb3JkbGVhcm5lcnNkaWN0aW9uYXJpZXMuY29tL3VzL2Rl
-        ZmluaXRpb24vYW1lcmljYW5fZW5nbGlzaC9leGVtcGxhcnkiIHRpdGxlPSJW
+        c3M9J2gnPmNvbXBhc3Npb25hdGU8L2gyPjxkaXYgY2xhc3M9J2QnPmZlZWxp
+        bmcgb3Igc2hvd2luZyBzeW1wYXRoeSZoZWxsaXA7PC9kaXY+CiAgICAgICAg
+        PGRpdiBjbGFzcz0iYnRuIj4KICAgICAgICAgICAgPGEgaHJlZj0iaHR0cDov
+        L3d3dy5veGZvcmRsZWFybmVyc2RpY3Rpb25hcmllcy5jb20vdXMvZGVmaW5p
+        dGlvbi9hbWVyaWNhbl9lbmdsaXNoL2NvbXBhc3Npb25hdGUiIHRpdGxlPSJW
         aWV3IHRvZGF5JmFwb3M7cyBXb3JkIG9mIHRoZSBEYXkiPlNlZSBlbnRyeTwv
         YT4KICAgICAgICA8L2Rpdj4KICAgIDwvZGl2Pgo8L2Rpdj4gICAgPC9kaXY+
         CiAgICA8ZGl2IGNsYXNzPSJyZXNwb25zaXZlX3JvdyByZXNwb25zaXZlX2Rp
@@ -577,12 +577,12 @@ http_interactions:
         cy1pY29uIiBocmVmPSJodHRwOi8vd3d3Lm94Zm9yZGxlYXJuZXJzZGljdGlv
         bmFyaWVzLmNvbS91cy93b3RkL2FtZXJpY2FuX2VuZ2xpc2gvd290ZHJzcy54
         bWwiIHRhcmdldD0iX2JsYW5rIj48L2E+CiAgICA8L2Rpdj4KICAgIDxkaXYg
-        aWQ9ImRheWJveCI+CiAgICAgICAgPGgyIGNsYXNzPSdoJz5leGVtcGxhcnk8
-        L2gyPjxkaXYgY2xhc3M9J2QnPnByb3ZpZGluZyBhIGdvb2QgZXhhbXBsZSBm
-        b3IgcGVvcGxlJmhlbGxpcDs8L2Rpdj4KICAgICAgICA8ZGl2IGNsYXNzPSJi
-        dG4iPgogICAgICAgICAgICA8YSBocmVmPSJodHRwOi8vd3d3Lm94Zm9yZGxl
-        YXJuZXJzZGljdGlvbmFyaWVzLmNvbS91cy9kZWZpbml0aW9uL2FtZXJpY2Fu
-        X2VuZ2xpc2gvZXhlbXBsYXJ5IiB0aXRsZT0iVmlldyB0b2RheSZhcG9zO3Mg
+        aWQ9ImRheWJveCI+CiAgICAgICAgPGgyIGNsYXNzPSdoJz5jb21wYXNzaW9u
+        YXRlPC9oMj48ZGl2IGNsYXNzPSdkJz5mZWVsaW5nIG9yIHNob3dpbmcgc3lt
+        cGF0aHkmaGVsbGlwOzwvZGl2PgogICAgICAgIDxkaXYgY2xhc3M9ImJ0biI+
+        CiAgICAgICAgICAgIDxhIGhyZWY9Imh0dHA6Ly93d3cub3hmb3JkbGVhcm5l
+        cnNkaWN0aW9uYXJpZXMuY29tL3VzL2RlZmluaXRpb24vYW1lcmljYW5fZW5n
+        bGlzaC9jb21wYXNzaW9uYXRlIiB0aXRsZT0iVmlldyB0b2RheSZhcG9zO3Mg
         V29yZCBvZiB0aGUgRGF5Ij5TZWUgZW50cnk8L2E+CiAgICAgICAgPC9kaXY+
         CiAgICA8L2Rpdj4KPC9kaXY+ICAgICAgICA8L2Rpdj4KICAgICAgICA8ZGl2
         IGNsYXNzPSJyZXNwb25zaXZlX3JvdyByZXNwb25zaXZlX3JlY2VudHNlYXJj
@@ -734,5 +734,5 @@ http_interactions:
         MCIgaGVpZ2h0PSIxIiB3aWR0aD0iMSIgYWx0PSJRdWFudGNhc3QiLz48L25v
         c2NyaXB0PgoKPC9ib2R5Pgo8L2h0bWw+Cg==
     http_version: 
-  recorded_at: Mon, 27 Jul 2015 12:51:32 GMT
+  recorded_at: Tue, 28 Jul 2015 13:02:44 GMT
 recorded_with: VCR 2.9.3

@@ -2,12 +2,12 @@ require 'spec_helper'
 
 describe OxfordLearnersDictionaries::WordOfTheDay, :vcr do
 
-  let(:word) { 'exemplary' }
+  let(:word) { 'compassionate' }
   let(:wotd) { described_class.new }
 
   let(:formatted_word)   { word.strip.gsub(' ', '-') }
   let(:param_word)       { formatted_word.gsub('-', '+') }
-  let(:short_definition) { 'providing a good example for people' }
+  let(:short_definition) { 'feeling or showing sympathy' }
 
   let(:url)          { 'http://www.oxfordlearnersdictionaries.com' }
   let(:word_url)     { "http://www.oxfordlearnersdictionaries.com/definition/english/#{formatted_word}?q=#{param_word}" }
@@ -45,15 +45,15 @@ describe OxfordLearnersDictionaries::WordOfTheDay, :vcr do
         wotd.look_up
       end
 
-      let(:definition) { 'providing a good example for people to copy' }
-      let(:example) { 'Her behaviour was exemplary.' }
+      let(:definition) { 'feeling or showing sympathy for people who are suffering' }
+      let(:example) { 'Politicians are not usually regarded as warm or compassionate people' }
 
-      let(:first_signification) { wotd.english.definition.first.signification }
-      let(:first_example) { wotd.english.definition.first.examples.first.sentence }
+      let(:first_text) { wotd.english.definition.first.text }
+      let(:first_example) { wotd.english.definition.first.examples.first.text }
 
       it 'matches description' do
-        expect(wotd.english.definition.count).to eq 2
-        expect(first_signification).to match definition
+        expect(wotd.english.definition.count).to eq 1
+        expect(first_text).to match definition
       end
 
       it 'matches example' do

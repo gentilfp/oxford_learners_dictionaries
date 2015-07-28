@@ -76,9 +76,9 @@ describe OxfordLearnersDictionaries::English, :vcr do
       end
 
       it 'shows all definitions in Hash' do
-        expect(dictionary.definition[0].signification).to eq definition_0
-        expect(dictionary.definition[1].signification).to eq definition_1
-        expect(dictionary.definition[2].signification).to eq definition_2
+        expect(dictionary.definition[0].text).to eq definition_0
+        expect(dictionary.definition[1].text).to eq definition_1
+        expect(dictionary.definition[2].text).to eq definition_2
       end
     end
 
@@ -91,7 +91,7 @@ describe OxfordLearnersDictionaries::English, :vcr do
       end
 
       it 'shows definition in Hash' do
-        expect(dictionary.definition[0].signification).to match definition
+        expect(dictionary.definition[0].text).to match definition
       end
     end
 

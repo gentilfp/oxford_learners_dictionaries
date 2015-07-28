@@ -21,27 +21,27 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 27 Jul 2015 12:50:43 GMT
+      - Tue, 28 Jul 2015 12:56:07 GMT
       Content-Length:
       - '0'
       Connection:
       - keep-alive
       Set-Cookie:
-      - JSESSIONID=8C761BEB1ED35B147869FC1585D4F38C; Path=/; HttpOnly
+      - JSESSIONID=6669F72968B2412032E9503964221045; Path=/; HttpOnly
       - session=d3f6ad59a1c9be42babf26b6adc38e72; domain=.oxfordlearnersdictionaries.com;
         path=/
       Location:
-      - http://www.oxfordlearnersdictionaries.com/definition/english/take_1;jsessionid=8C761BEB1ED35B147869FC1585D4F38C?isEntryInOtherDict=false
+      - http://www.oxfordlearnersdictionaries.com/definition/english/take_1;jsessionid=6669F72968B2412032E9503964221045?isEntryInOtherDict=false
       Content-Language:
       - en
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 27 Jul 2015 12:51:03 GMT
+  recorded_at: Tue, 28 Jul 2015 12:56:31 GMT
 - request:
     method: get
-    uri: http://www.oxfordlearnersdictionaries.com/definition/english/take_1;jsessionid=8C761BEB1ED35B147869FC1585D4F38C?isEntryInOtherDict=false
+    uri: http://www.oxfordlearnersdictionaries.com/definition/english/take_1;jsessionid=6669F72968B2412032E9503964221045?isEntryInOtherDict=false
     body:
       encoding: US-ASCII
       string: ''
@@ -60,7 +60,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 27 Jul 2015 12:50:44 GMT
+      - Tue, 28 Jul 2015 12:56:09 GMT
       Content-Type:
       - text/html;charset=UTF-8
       Content-Length:
@@ -4038,5 +4038,5 @@ http_interactions:
         dD0iMSIgd2lkdGg9IjEiIGFsdD0iUXVhbnRjYXN0Ii8+PC9ub3NjcmlwdD4K
         CjwvYm9keT4KPC9odG1sPgo=
     http_version: 
-  recorded_at: Mon, 27 Jul 2015 12:51:05 GMT
+  recorded_at: Tue, 28 Jul 2015 12:56:33 GMT
 recorded_with: VCR 2.9.3

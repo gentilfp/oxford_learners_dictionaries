@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 27 Jul 2015 12:51:03 GMT
+      - Tue, 28 Jul 2015 12:56:30 GMT
       Content-Type:
       - text/html;charset=UTF-8
       Content-Length:
@@ -29,7 +29,7 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - JSESSIONID=BAE10418690674BB13E58F060FA960A6; Path=/; HttpOnly
+      - JSESSIONID=5B7539E42F1672AA864C94FD9C1A7996; Path=/; HttpOnly
       - session=d3f6ad59a1c9be42babf26b6adc38e72; domain=.oxfordlearnersdictionaries.com;
         path=/
       Content-Language:
@@ -1807,5 +1807,5 @@ http_interactions:
         IiB3aWR0aD0iMSIgYWx0PSJRdWFudGNhc3QiLz48L25vc2NyaXB0PgoKPC9i
         b2R5Pgo8L2h0bWw+Cg==
     http_version: 
-  recorded_at: Mon, 27 Jul 2015 12:51:24 GMT
+  recorded_at: Tue, 28 Jul 2015 12:56:54 GMT
 recorded_with: VCR 2.9.3

@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 27 Jul 2015 12:51:10 GMT
+      - Tue, 28 Jul 2015 12:56:31 GMT
       Content-Type:
       - text/html;charset=UTF-8
       Transfer-Encoding:
@@ -29,7 +29,7 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - JSESSIONID=F6E343C2440211CDED5DF61854A4718F; Path=/; HttpOnly
+      - JSESSIONID=5C02D354585E12DDF96BD8FE994845EA; Path=/; HttpOnly
       - session=68363f70839fab8d0bde84ee6fc635a3; domain=.oxfordlearnersdictionaries.com;
         path=/
       Content-Language:
@@ -279,5 +279,5 @@ http_interactions:
         src=\"http://pixel.quantserve.com/pixel/p-cfSla1Cke_iBQ.gif\" style=\"display:
         none;\" border=\"0\" height=\"1\" width=\"1\" alt=\"Quantcast\"/></noscript>\n\n</body>\n</html>\n"
     http_version: 
-  recorded_at: Mon, 27 Jul 2015 12:51:31 GMT
+  recorded_at: Tue, 28 Jul 2015 12:56:54 GMT
 recorded_with: VCR 2.9.3
