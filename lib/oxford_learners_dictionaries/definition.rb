@@ -2,7 +2,7 @@ require 'nokogiri'
 
 module OxfordLearnersDictionaries
   class Definition
-    attr_reader :signification, :examples
+    attr_reader :text, :examples
 
     def initialize page
       @page = page
@@ -10,14 +10,14 @@ module OxfordLearnersDictionaries
     end
 
     def parse_single_definition
-      signification =  @page.css('.def')
-      @signification = signification.count > 0 ? signification[0].text : signification.text
+      text =  @page.css('.def')
+      @text = text.count > 0 ? text[0].text : text.text
       @examples.push(::OxfordLearnersDictionaries::Example.new(@page.css('.x-g')))
       self
     end
 
     def parse_multiple_definitions index
-      @signification = @page.css('.def')[index].text
+      @text = @page.css('.def')[index].text
       return self if @page.css('.x-gs')[index].nil?
 
       @page.css('.x-gs')[index].css('.x-g').each do |example|
