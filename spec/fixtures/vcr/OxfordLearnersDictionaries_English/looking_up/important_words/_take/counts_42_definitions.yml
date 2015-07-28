@@ -21,27 +21,27 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 27 Jul 2015 12:50:49 GMT
+      - Tue, 28 Jul 2015 12:56:12 GMT
       Content-Length:
       - '0'
       Connection:
       - keep-alive
       Set-Cookie:
-      - JSESSIONID=588BD3FDA86E9161DE24DE26F61A3C9D; Path=/; HttpOnly
+      - JSESSIONID=F8ABAC0FB06589AD639466CD6F282030; Path=/; HttpOnly
       - session=68363f70839fab8d0bde84ee6fc635a3; domain=.oxfordlearnersdictionaries.com;
         path=/
       Location:
-      - http://www.oxfordlearnersdictionaries.com/definition/english/take_1;jsessionid=588BD3FDA86E9161DE24DE26F61A3C9D?isEntryInOtherDict=false
+      - http://www.oxfordlearnersdictionaries.com/definition/english/take_1;jsessionid=F8ABAC0FB06589AD639466CD6F282030?isEntryInOtherDict=false
       Content-Language:
       - en
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Mon, 27 Jul 2015 12:51:10 GMT
+  recorded_at: Tue, 28 Jul 2015 12:56:35 GMT
 - request:
     method: get
-    uri: http://www.oxfordlearnersdictionaries.com/definition/english/take_1;jsessionid=588BD3FDA86E9161DE24DE26F61A3C9D?isEntryInOtherDict=false
+    uri: http://www.oxfordlearnersdictionaries.com/definition/english/take_1;jsessionid=F8ABAC0FB06589AD639466CD6F282030?isEntryInOtherDict=false
     body:
       encoding: US-ASCII
       string: ''
@@ -60,7 +60,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Mon, 27 Jul 2015 12:50:50 GMT
+      - Tue, 28 Jul 2015 12:56:13 GMT
       Content-Type:
       - text/html;charset=UTF-8
       Content-Length:
@@ -68,7 +68,8 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - session=68363f70839fab8d0bde84ee6fc635a3; domain=.oxfordlearnersdictionaries.com;
+      - JSESSIONID=B4F6BB82848983657AABC64B2C37D60E; Path=/; HttpOnly
+      - session=d3f6ad59a1c9be42babf26b6adc38e72; domain=.oxfordlearnersdictionaries.com;
         path=/
       Content-Language:
       - en
@@ -4038,5 +4039,5 @@ http_interactions:
         dD0iMSIgd2lkdGg9IjEiIGFsdD0iUXVhbnRjYXN0Ii8+PC9ub3NjcmlwdD4K
         CjwvYm9keT4KPC9odG1sPgo=
     http_version: 
-  recorded_at: Mon, 27 Jul 2015 12:51:12 GMT
+  recorded_at: Tue, 28 Jul 2015 12:56:37 GMT
 recorded_with: VCR 2.9.3
